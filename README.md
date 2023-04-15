@@ -59,7 +59,7 @@ la aplicación usando la identificación previa, más esta solicitud, con ayuda 
 
 las aplicaciones, interfaces de análisis de AI, apis, y demás que permiten que este sistema funcionaria en la vida real, NO están dentro del alcance del caso, solo lo solicitado específicamente en los entregables de cada preliminar y final.
 
-## preliminar #1, data cluster, databases design and implementation, 50pts
+## preliminar #1, data cluster, databases design and implementation, 40pts
 + dado los requerimientos anteriores proceda a diseñar las colecciones y json necesarios para el sistema
 + diseñe e implemente relacionalmente en el SABD de su elección lo que sea necesario para dar consistencia transaccional
 + diseñe, implemente y ponga en ejecución un shard cluster en mongodb que permita a AIBulb proveer con eficiencia (esto es reduciendo al máximo posible que un usuario tenga que consultar y evaluar aplicaciones que involucren hacer query a datos que estén fuera del alcance de su localización o sus preferencias)
@@ -70,7 +70,7 @@ las aplicaciones, interfaces de análisis de AI, apis, y demás que permiten que
 + todos los scripts, archivos de comandos y datos que sean necesarios para este ejercicio
 + fecha y hora del último commit : domingo 23 de abril, media noche
 
-## preliminar #2, real time notifications, async update for content and sales, TBD , 50pts
+## preliminar #2, real time notifications, async update for content and sales, TBD , 60pts
 + cuando un proveedor de servicio quiere actualizar su contenido de la página principal debe hacerlo por medio de un api
 + dado que esto es tan masivo, no se realiza la actualización en el cluster en tiempo real si no que se hace de forma asíncrona
 + el request del proveedor al api en lugar de ser salvado es enviado a un servidor de notificaciones persistente, en este caso se ha decidido que sea kafka
