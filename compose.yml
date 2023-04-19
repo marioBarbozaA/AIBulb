@@ -1,0 +1,31 @@
+version: '3'
+services:
+  mongo:
+    image: mongo
+    command: mongod --shardsvr --replSet "shard1" --bind_ip_all
+    ports:
+      - "27017:27017"
+    networks:
+      - shardnet
+    volumes:
+      - mongodata:/data/db
+  config1:
+    image: mongo
+    command: mongod --configsvr --replSet "configReplSet" --bind_ip_all
+    networks:
+      - shardnet
+    volumes:
+      - config1data:/data/configdb
+  config2:
+    image: mongo
+    command: mongod --configsvr --replSet "configReplSet" --bind_ip_all
+    networks:
+      - shardnet
+    volumes:
+      - config2data:/data/configdb
+networks:
+  shardnet:
+volumes:
+  mongodata:
+  config1data:
+  config2data:
