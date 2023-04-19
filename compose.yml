@@ -1,31 +1,24 @@
 version: '3'
+
 services:
-  mongo:
+  guadalajara:
     image: mongo
-    command: mongod --shardsvr --replSet "shard1" --bind_ip_all
-    ports:
-      - "27017:27017"
+    command: mongod --replSet repmex --bind_ip 25.3.189.113
     networks:
-      - shardnet
-    volumes:
-      - mongodata:/data/db
-  config1:
+      hamachi-network:
+        ipv4_address: 25.3.189.113
+
+  cartago:
     image: mongo
-    command: mongod --configsvr --replSet "configReplSet" --bind_ip_all
+    command: mongod --replSet repcr --bind_ip 25.3.224.0
     networks:
-      - shardnet
-    volumes:
-      - config1data:/data/configdb
-  config2:
-    image: mongo
-    command: mongod --configsvr --replSet "configReplSet" --bind_ip_all
-    networks:
-      - shardnet
-    volumes:
-      - config2data:/data/configdb
+      hamachi-network:
+        ipv4_address: 25.3.224.0
+
 networks:
-  shardnet:
-volumes:
-  mongodata:
-  config1data:
-  config2data:
+  hamachi-network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 25.3.0.0/16
