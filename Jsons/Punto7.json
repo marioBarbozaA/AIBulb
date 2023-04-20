@@ -1,0 +1,145 @@
+{
+  "tituloApp": "AlBulb",
+  "geolocalizacion": true,
+  "ubicacionActual": {
+    "ciudad": "Ciudad de México",
+    "estado": "CDMX",
+    "pais": "México",
+    "coordenadas": {
+      "latitud": "19.4326",
+      "longitud": "-99.1332"
+    }
+  },
+  "proveedoresPagados": [
+    {
+      "nombre": "Electricidad Express",
+      "logo": "https://ejemplo.com/logo-electricidad-express.jpg",
+      "categoria": "servicios",
+      "puntuacion": 4.5
+    },
+    {
+      "nombre": "Cerrajería 24/7",
+      "logo": "https://ejemplo.com/logo-cerrajeria-24-7.jpg",
+      "categoria": "services",
+      "puntuacion": 4.2
+    },
+    {
+      "nombre": "Limpieza Total",
+      "logo": "https://ejemplo.com/logo-limpieza-total.jpg",
+      "categoria": "housekeeping",
+      "puntuacion": 3.9
+    }
+  ],
+  "servicios": {
+    "hospitality": [
+      {
+        "nombre": "Reservaciones de hotel",
+        "imagen": "https://ejemplo.com/imagen-reservaciones-hotel.jpg",
+        "categoria": "hospitality",
+        "anio": 2022,
+        "puntuacion": 4.7
+      },
+      {
+        "nombre": "Servicio de restaurante",
+        "imagen": "https://ejemplo.com/imagen-servicio-restaurante.jpg",
+        "categoria": "hospitality",
+        "anio": 2022,
+        "puntuacion": 4.2
+      }
+    ],
+    "health": [
+      {
+        "nombre": "Consulta médica en línea",
+        "imagen": "https://ejemplo.com/imagen-consulta-medica-en-linea.jpg",
+        "categoria": "health",
+        "anio": 2022,
+        "puntuacion": 4.6
+      },
+      {
+        "nombre": "Servicio de enfermería a domicilio",
+        "imagen": "https://ejemplo.com/imagen-servicio-enfermeria-domicilio.jpg",
+        "categoria": "health",
+        "anio": 2022,
+        "puntuacion": 4.1
+      }
+    ],
+    "finance": [
+      {
+        "nombre": "Asesoría financiera personalizada",
+        "imagen": "https://ejemplo.com/imagen-asesoria-financiera-personalizada.jpg",
+        "categoria": "finance",
+        "anio": 2022,
+        "puntuacion": 4.8
+      },
+      {
+        "nombre": "Préstamos personales en línea",
+        "imagen": "https://ejemplo.com/imagen-prestamos-personales-en-linea.jpg",
+        "categoria": "finance",
+        "anio": 2022,
+        "puntuacion": 3.9
+      }
+    ],
+    "services": [
+      {
+        "nombre": "Electricidad",
+        "imagen": "https://ejemplo.com/imagen-electricidad.jpg",
+        "categoria": "services",
+        "anio": 2022,
+        "puntuacion": 4.5
+      },
+      {
+        "nombre": "Fontanería",
+        "imagen": "https://ejemplo.com/imagen-fontaneria.jpg",
+        "categoria": "services",
+        "anio": 2022,
+        "puntuacion": 4.2
+       }
+],
+"transport": [
+{
+"nombre": "Servicio de taxi",
+"imagen": "https://ejemplo.com/imagen-servicio-taxi.jpg",
+"categoria": "transport",
+"anio": 2022,
+"puntuacion": 4.9
+},
+{
+"nombre": "Alquiler de autos",
+"imagen": "https://ejemplo.com/imagen-alquiler-autos.jpg",
+"categoria": "transport",
+"anio": 2022,
+"puntuacion": 4.4
+}
+],
+"housekeeping": [
+{
+"nombre": "Limpieza a domicilio",
+"imagen": "https://ejemplo.com/imagen-limpieza-domicilio.jpg",
+"categoria": "housekeeping",
+"anio": 2022,
+"puntuacion": 4.3
+},
+{
+"nombre": "Cuidado de mascotas",
+"imagen": "https://ejemplo.com/imagen-cuidado-mascotas.jpg",
+"categoria": "housekeeping",
+"anio": 2022,
+"puntuacion": 4.0
+}
+]
+},
+"alertas": [
+{
+"titulo": "Nuevo servicio de jardinería",
+"descripcion": "Ahora puedes contratar a profesionales para cuidar tus plantas y jardín",
+"imagen": "https://ejemplo.com/imagen-jardineria.jpg",
+"fecha": "2023-04-17"
+},
+{
+"titulo": "Descuento del 20% en servicio de limpieza",
+"descripcion": "Aprovecha nuestra promoción para que tengas tu hogar siempre limpio",
+"imagen": "https://ejemplo.com/imagen-limpieza-descuento.jpg",
+"fecha": "2023-04-12"
+}
+]
+}
