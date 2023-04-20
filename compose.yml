@@ -3,17 +3,17 @@ version: '3'
 services:
   guadalajara:
     image: mongo
-    command: mongod --replSet repmex --bind_ip 25.3.189.113
+    command: mongod --replSet repmex --bind_ip 25.3.0.2
     networks:
       hamachi-network:
-        ipv4_address: 25.3.189.113
+        ipv4_address: 25.3.0.2
 
   cartago:
     image: mongo
-    command: mongod --replSet repcr --bind_ip 25.3.224.0
+    command: mongod --replSet repcr --bind_ip 25.3.0.3
     networks:
       hamachi-network:
-        ipv4_address: 25.3.224.0
+        ipv4_address: 25.3.0.3
 
 networks:
   hamachi-network:
