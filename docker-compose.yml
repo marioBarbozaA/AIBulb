@@ -30,7 +30,7 @@ services:
   Config_1:
     image: mongo
     container_name: Config_1
-    command: mongod --port 27017  --configsvr --replSet rs-config-server # Falta Network
+    command: mongod --port 27017  --configsvr --replSet rs-config-server 
     ports:
       - 27037:27017
     networks:
@@ -50,19 +50,6 @@ services:
     restart: always
     links:
       - Config_1
-
-  Config_3:
-    image: mongo
-    container_name: Config_3 
-    command: mongod --port 27017  --configsvr --replSet rs-config-server
-    ports:
-      - 27057:27017
-    networks:
-      OurNetwork:
-        ipv4_address: 10.0.0.6
-    restart: always
-    links:
-      - Config_2
 
 ## Shards
   Mex_Sur:
