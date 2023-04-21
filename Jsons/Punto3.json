@@ -1,0 +1,96 @@
+{
+  "tituloApp": "AlBulb",
+  "proveedor": {
+    "Nombre": "SuperMarioBros",
+    "titulo": "Nuestros servicios",
+    "logoProveedor": "https://ejemplo.com/logo-proveedor.jpg",
+    "servicios": [
+      {
+        "nombre": "Electricidad",
+        "imagenServicio": "https://ejemplo.com/imagen-electricidad.jpg",
+        "horarioDeServicio": "9:00 - 18:00",
+        "disponibilidad": ["CDMX", "Guadalajara", "Monterrey"],
+        "extras" : ["Servicio de emergencia 24/7"],
+        "modeloDePago": "In-Service",
+        "manejoDePrecios": "Por hora",
+        "precio": "50$"
+      },
+      {
+        "nombre": "Plomería",
+        "imagenServicio": "https://ejemplo.com/imagen-plomeria.jpg",
+        "horarioDeServicio": "24/7",
+        "disponibilidad": ["CDMX", "Guadalajara"],
+        "extras" : ["Servicio de emergencia 24/7"],
+        "modeloDePago": "In-Service",
+        "manejoDePrecios": "Por hora",
+        "precio": "25$"
+      },
+      {
+        "nombre": "Carpintería",
+        "imagenServicio": "https://ejemplo.com/imagen-carpinteria.jpg",
+        "horarioDeServicio": "9:00 - 18:00",
+        "disponibilidad": ["CDMX"],
+        "extras" : ["Servicio de emergencia 24/7"],
+        "modeloDePago": "In-Service",
+        "manejoDePrecios": "Por hora",
+        "precio": "15$"
+      }
+    ]
+  },
+  "geolocalizacion": true,
+  "perfilDeUsuario": {
+    "titulo": "Mi perfil",
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "email": "juanperez35@gmail.com",
+    "pais": "México",
+    "historialDeTransacciones": [
+        {
+          "titulo": "Cambio Bombillo",
+          "fecha": "2022-04-18T08:30:00.000Z",
+          "descripcion": "Cambio de bombillo en la cocina",
+          "monto": "50$",
+          "identificador": "juanperez35@gmail.com"
+
+        },
+        {
+          "titulo": "Pago de servicio de plomería",
+          "fecha": "2022-04-18T12:00:00.000Z",
+          "descripcion": "Pago de servicio de plomería",
+          "monto": "100$",
+          "identificador": "juanperez35@gmail.com"
+        },
+        {
+          "titulo": "Pago de servicio de carpintería",
+          "fecha": "2022-04-18T14:30:00.000Z",
+          "descripcion": "Pago de servicio de carpintería",
+          "monto": "100$",
+          "identificador": "juanperez35@gmail.com"
+        }
+      ]
+    
+  },
+  "serviciosPersonalizados": {
+    "titulo": "Resultados de búsqueda",
+    "sinResultados": "No se encontraron resultados",
+    "Electricidad": {
+      "titulo": "Electricidad",
+      "horarioDeServicio": "9:00 - 18:00",
+      "disponibilidad": ["CDMX", "Guadalajara", "Monterrey"]
+    },
+    "Plomería": {
+      "titulo": "Plomería",
+      "horarioDeServicio": "24/7",
+      "disponibilidad": ["CDMX", "Guadalajara"]
+    },
+    "Carpintería": {
+      "titulo": "Carpintería",
+      "horarioDeServicio": "9:00 - 18:00",
+      "disponibilidad": ["CDMX"]
+    }
+  },
+  "metodosDePago": {
+    "titulo": "Métodos de pago",
+"metodos":["Wallet1","Wallet2","Wallet3"]
+}
+}
