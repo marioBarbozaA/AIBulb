@@ -1,6 +1,6 @@
 version: '3'
 services:
-  Camilo:
+  Cam:
     ## Router
     Router_1:
       image: mongo
@@ -16,9 +16,9 @@ services:
     Router_2:
       image: mongo
       container_name: Router_2
-      command: mongos --port 27017  --configdb rs-config-server/configsvr01:27017,configsvr02:27017,configsvr03:27017 --bind_ip_all
+      command: mongos --port 27018  --configdb rs-config-server/configsvr01:27017,configsvr02:27017,configsvr03:27017 --bind_ip_all
       ports:
-        - 27007:27017
+        - 27007:27018
       networks:
         OurNetwork:
           ipv4_address: 10.0.0.3
@@ -28,9 +28,9 @@ services:
     Config_1:
       image: mongo
       container_name: Config_1
-      command: mongod --port 27017  --configsvr --replSet rs-config-server # Falta Network
+      command: mongod --port 27019  --configsvr --replSet rs-config-server # Falta Network
       ports:
-        - 27037:27017
+        - 27037:27019
       networks:
         OurNetwork:
           ipv4_address: 10.0.0.4
@@ -39,20 +39,21 @@ services:
     Config_2:
       image: mongo
       container_name: Config_2
-      command: mongod --port 27017  --configsvr --replSet rs-config-server
+      command: mongod --port 27020  --configsvr --replSet rs-config-server
       ports:
-        - 27047:27017
+        - 27047:27020
       networks:
         OurNetwork:
           ipv4_address: 10.0.0.5
       restart: always
       
+    ## Shard Servers
     Gm_Sur:
       image: mongo
       container_name: Gm_Sur  #shard-03-node-a
-      command: mongod --port 27017  --shardsvr --replSet "Camilo"
+      command: mongod --port 27021  --shardsvr --replSet "Camilo"
       ports:
-        - 27126:27017
+        - 27126:27021
       networks:
         OurNetwork:
           ipv4_address: 10.0.0.16
@@ -61,9 +62,9 @@ services:
     Gm_Oeste:
       image: mongo
       container_name: Gm_Oeste #shard-03-node-b
-      command: mongod --port 27017  --shardsvr --replSet "Camilo"
+      command: mongod --port 27022  --shardsvr --replSet "Camilo"
       ports:
-        - 27127:27017
+        - 27127:27022
       networks:
         OurNetwork:
           ipv4_address: 10.0.0.17
@@ -72,9 +73,9 @@ services:
     Gm_Este:
       image: mongo
       container_name: Gm_Este #shard-03-node-c
-      command: mongod --port 27017  --shardsvr --replSet "Camilo"
+      command: mongod --port 27023  --shardsvr --replSet "Camilo"
       ports:
-        - 27128:27017
+        - 27128:27023
       networks:
         OurNetwork:
           ipv4_address: 10.0.0.18
@@ -85,9 +86,9 @@ services:
     Mex_Sur:
       image: mongo
       container_name: Mex_Sur #shard-01-node-a
-      command: mongod --port 27017  --shardsvr --replSet "Raulis"
+      command: mongod --port 27024  --shardsvr --replSet "Raulis"
       ports:
-        - 27117:27017
+        - 27117:27024
       networks:
         OurNetwork:
           ipv4_address: 10.0.0.7
@@ -99,9 +100,9 @@ services:
     Mex_oeste:
       image: mongo
       container_name: Mex_oeste #shard-01-node-b
-      command: mongod --port 27017  --shardsvr --replSet "Raulis"
+      command: mongod --port 27025  --shardsvr --replSet "Raulis"
       ports:
-        - 27118:27017
+        - 27118:27025
       networks:
         OurNetwork:
           ipv4_address: 10.0.0.8
@@ -110,20 +111,21 @@ services:
     Mex_Este:
       image: mongo
       container_name: Mex_Este #shard-01-node-c
-      command: mongod --port 27017  --shardsvr --replSet "Raulis"
+      command: mongod --port 27026  --shardsvr --replSet "Raulis"
       ports:
-        - 27119:27017
+        - 27119:27026
       networks:
         OurNetwork:
           ipv4_address: 10.0.0.9
       restart: always
+
   Mario:
     CR_Sur:
       image: mongo
       container_name: CR_Sur #shard-02-node-a
-      command: mongod --port 27017  --shardsvr --replSet "CompuMario"
+      command: mongod --port 27027  --shardsvr --replSet "CompuMario"
       ports:
-        - 27120:27017
+        - 27120:27027
       networks:
         OurNetwork:
           ipv4_address: 10.0.0.10
@@ -135,9 +137,9 @@ services:
     CR_Oeste:
       image: mongo
       container_name: CR_Oeste #shard-02-node-b
-      command: mongod --port 27017  --shardsvr --replSet "CompuMario"
+      command: mongod --port 27028  --shardsvr --replSet "CompuMario"
       ports:
-        - 27121:27017
+        - 27121:27028
       networks:
         OurNetwork:
           ipv4_address: 10.0.0.11
@@ -146,35 +148,32 @@ services:
     CR_Este:
       image: mongo
       container_name: "CR_Este" #shard-02-node-c
-      command: mongod --port 27017  --shardsvr --replSet "CompuMario"
+      command: mongod --port 27029  --shardsvr --replSet "CompuMario"
       ports:
-        - 27122:27017
+        - 27122:27029
       networks:
         OurNetwork:
           ipv4_address: 10.0.0.12
       restart: always
 
-  Stephanie:
+  Steph:
     Usa_South:
       image: mongo
       container_name: Usa_South  #shard-03-node-a
-      command: mongod --port 27017  --shardsvr --replSet "Stephanie"
+      command: mongod --port 27030  --shardsvr --replSet "Stephanie"
       ports:
-        - 27123:27017
+        - 27123:27030
       networks:
         OurNetwork:
           ipv4_address: 10.0.0.13
       restart: always
-      links:
-        - Usa_West #shard03-b
-        - Usa_East #shard03-c
 
     Usa_West:
       image: mongo
       container_name: Usa_West #shard-03-node-b
-      command: mongod --port 27017  --shardsvr --replSet "Stephanie"
+      command: mongod --port 27031  --shardsvr --replSet "Stephanie"
       ports:
-        - 27124:27017
+        - 27124:27031
       networks:
         OurNetwork:
           ipv4_address: 10.0.0.14
@@ -183,9 +182,9 @@ services:
     Usa_East:
       image: mongo
       container_name: Usa_East #shard-03-node-c
-      command: mongod --port 27017  --shardsvr --replSet "Stephanie"
+      command: mongod --port 27032  --shardsvr --replSet "Stephanie"
       ports:
-        - 27125:27017
+        - 27125:27032
       networks:
         OurNetwork:
           ipv4_address: 10.0.0.15
@@ -198,7 +197,7 @@ networks:
     ipam:
       config:
         - subnet: 10.0.0.0/27
-        
+
 #  RaulisNet:
 #    driver: bridge
 #    ipv4_address: 25.19.99.53

@@ -1,0 +1,35 @@
+version: '3'
+services:
+  CR_Sur:
+    image: mongo
+    container_name: CR_Sur #shard-02-node-a
+    command: mongod --port 27027  --shardsvr --replSet "CompuMario"
+    ports:
+      - 27120:27027
+    networks:
+      OurNetwork:
+        ipv4_address: 10.0.0.10
+    restart: always
+    links:
+      - CR_Oeste #shard02-b
+      - CR_Este #shard02-c
+  CR_Oeste:
+    image: mongo
+    container_name: CR_Oeste #shard-02-node-b
+    command: mongod --port 27028  --shardsvr --replSet "CompuMario"
+    ports:
+      - 27121:27028
+    networks:
+      OurNetwork:
+        ipv4_address: 10.0.0.11
+    restart: always
+  CR_Este:
+    image: mongo
+    container_name: "CR_Este" #shard-02-node-c
+    command: mongod --port 27029  --shardsvr --replSet "CompuMario"
+    ports:
+      - 27122:27029
+    networks:
+      OurNetwork:
+        ipv4_address: 10.0.0.12
+    restart: always

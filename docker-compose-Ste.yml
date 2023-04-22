@@ -1,0 +1,34 @@
+version: '3'
+services:
+  Usa_South:
+    image: mongo
+    container_name: Usa_South  #shard-03-node-a
+    command: mongod --port 27030  --shardsvr --replSet "Stephanie"
+    ports:
+      - 27123:27030
+    networks:
+      OurNetwork:
+        ipv4_address: 10.0.0.13
+    restart: always
+
+  Usa_West:
+    image: mongo
+    container_name: Usa_West #shard-03-node-b
+    command: mongod --port 27031  --shardsvr --replSet "Stephanie"
+    ports:
+      - 27124:27031
+    networks:
+      OurNetwork:
+        ipv4_address: 10.0.0.14
+    restart: always
+    
+  Usa_East:
+    image: mongo
+    container_name: Usa_East #shard-03-node-c
+    command: mongod --port 27032  --shardsvr --replSet "Stephanie"
+    ports:
+      - 27125:27032
+    networks:
+      OurNetwork:
+        ipv4_address: 10.0.0.15
+    restart: always
