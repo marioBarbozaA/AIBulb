@@ -8,11 +8,8 @@ services:
       - 27120:27227
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.10
-    restart: always
-    links:
-      - CR_Oeste #shard02-b
-      - CR_Este #shard02-c
+        ipv4_address: 10.0.0.9
+
   CR_Oeste:
     image: mongo
     container_name: CR_Oeste #shard-02-node-b
@@ -21,8 +18,8 @@ services:
       - 27121:27028
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.11
-    restart: always
+        ipv4_address: 10.0.0.10
+
   CR_Este:
     image: mongo
     container_name: "CR_Este" #shard-02-node-c
@@ -31,8 +28,7 @@ services:
       - 27122:27029
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.12
-    restart: always
+        ipv4_address: 10.0.0.11
     
 networks:
   OurNetwork:

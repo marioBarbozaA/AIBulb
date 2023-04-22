@@ -8,8 +8,7 @@ services:
       - 27123:27030
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.13
-    restart: always
+        ipv4_address: 10.0.0.12
 
   Usa_West:
     image: mongo
@@ -19,8 +18,7 @@ services:
       - 27124:27031
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.14
-    restart: always
+        ipv4_address: 10.0.0.13
     
   Usa_East:
     image: mongo
@@ -30,8 +28,7 @@ services:
       - 27125:27032
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.15
-    restart: always
+        ipv4_address: 10.0.0.14
 
       
 networks:
