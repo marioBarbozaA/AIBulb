@@ -5,7 +5,7 @@ services:
     container_name: CR_Sur #shard-02-node-a
     command: mongod --port 27027  --shardsvr --replSet "CompuMario"
     ports:
-      - 27120:27027
+      - 27120:27227
     networks:
       OurNetwork:
         ipv4_address: 10.0.0.10
@@ -33,3 +33,10 @@ services:
       OurNetwork:
         ipv4_address: 10.0.0.12
     restart: always
+    
+networks:
+  OurNetwork:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.0.0/27

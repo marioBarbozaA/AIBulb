@@ -32,3 +32,11 @@ services:
       OurNetwork:
         ipv4_address: 10.0.0.15
     restart: always
+
+      
+networks:
+  OurNetwork:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.0.0/27
