@@ -11,8 +11,8 @@ Es importante para la empresa tener una disponibilidad de 99.99, que no existan 
 docker network create --driver bridge --subnet 10.0.0.0/27 disponet
 
 // iniciar un servidor de configuración en modo configserver indicando la red y el nombre del replica set que dichos servidores van a atender
-// lo ideal es agregar mas servidores de configuracion en la replica
-docker run -d --net disponet --ip 10.0.0.4 --name dispconf1 mongo mongod --port 27017 --configsvr --replSet "repconfdisp" --dbpath /data/configdb
+// lo ideal es agregar mas servidores de configuracion en la replicaet --ip 10.0.0.4 --name dispconf1 mongo mongod --port 27017 --configsvr --replSet "repconfdisp" --dbpath /data/configdb
+docker run -d --net dispon
 docker run -d --net disponet --ip 10.0.0.5 --name dispconf2 mongo mongod --port 27017 --configsvr --replSet "repconfdisp" --dbpath /data/configdb 
 
 // ingresamos a un servidor de configuracion, y solo a uno, cualquiera de los servers de la misma replica

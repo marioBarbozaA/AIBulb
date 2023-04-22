@@ -1,0 +1,42 @@
+version: '3'
+services:
+  ## Shards
+  Mex_Sur:
+    image: mongo
+    container_name: Mex_Sur #shard-01-node-a
+    command: mongod --port 27024  --shardsvr --replSet "Raulis"
+    ports:
+      - 27117:27024
+    networks:
+      OurNetwork:
+        ipv4_address: 10.0.0.7
+    restart: always
+    links:
+      - Mex_oeste #shard01-b
+      - Mex_Este #shard01-c
+  Mex_oeste:
+    image: mongo
+    container_name: Mex_oeste #shard-01-node-b
+    command: mongod --port 27025  --shardsvr --replSet "Raulis"
+    ports:
+      - 27118:27025
+    networks:
+      OurNetwork:
+        ipv4_address: 10.0.0.8
+    restart: always
+  Mex_Este:
+    image: mongo
+    container_name: Mex_Este #shard-01-node-c
+    command: mongod --port 27026  --shardsvr --replSet "Raulis"
+    ports:
+      - 27119:27026
+    networks:
+      OurNetwork:
+        ipv4_address: 10.0.0.9
+    restart: always
+networks:
+  OurNetwork:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.0.0/27
