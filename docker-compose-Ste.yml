@@ -8,7 +8,7 @@ services:
       - 27126:27017
     networks:
       OurNetwork:
-        ipv4_address: 25.3.188.49
+        ipv4_address: 10.0.0.12
 
   Usa_West:
     image: mongo
@@ -18,7 +18,7 @@ services:
       - 27127:27017
     networks:
       OurNetwork:
-        ipv4_address: 25.3.188.50
+        ipv4_address: 10.0.0.13
     
   Usa_East:
     image: mongo
@@ -28,7 +28,7 @@ services:
       - 27128:27017
     networks:
       OurNetwork:
-        ipv4_address: 25.3.188.51
+        ipv4_address: 10.0.0.14
 
       
 networks:
@@ -36,4 +36,4 @@ networks:
     driver: bridge
     ipam:
       config:
-        - subnet: 25.3.188.46/27
+        - subnet: 10.0.0.0/27
