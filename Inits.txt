@@ -3,7 +3,7 @@
 
 rs.initiate(
   {
-    _id: "rs-config-server",
+    _id: "configrs",
     configsvr: true,
     members: [
       { _id : 0, host : "25.3.189.98:27017" },
@@ -27,10 +27,10 @@ rs.initiate(
 // Camilo
 #Initializing routers...
 
-rs.add( "Camilo/25.3.189.98:27017")
-rs.add( "CompuMario/25.3.224.2")
-rs.add( "Raulis/25.19.99.56")
-rs.add( "Stephanie/25.19.99.56")
+sh.addShard( "Camilo/25.3.189.98:27017")
+sh.addShard( "CompuMario/25.3.224.2")
+sh.addShard( "Raulis/25.19.99.56")
+sh.addShard( "Stephanie/25.19.99.56")
 
 # addShardTag
 

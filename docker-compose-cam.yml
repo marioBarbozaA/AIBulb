@@ -5,9 +5,9 @@ services:
   Config_1:
     image: mongo
     container_name: Config_1
-    command: mongod --port 27017  --configsvr --replSet rs-config-server --bind_ip_all # Falta Network
+    command: mongod --port 27017  --configsvr --replSet "configrs" --dbpath /data/configdb --bind_ip_all # Falta Network
     ports:
-      - 27118:27018
+      - 27118:27017
     networks:
       OurNetwork:
         ipv4_address: 25.3.189.98
@@ -15,9 +15,9 @@ services:
   Config_2:
     image: mongo
     container_name: Config_2
-    command: mongod --port 27017  --configsvr --replSet rs-config-server --bind_ip_all
+    command: mongod --port 27017  --configsvr --replSet "configrs" --dbpath /data/configdb --bind_ip_all
     ports:
-      - 27119:27019
+      - 27119:27017
     networks:
       OurNetwork:
         ipv4_address: 25.3.189.99
@@ -28,7 +28,7 @@ services:
     container_name: Gm_Sur  #shard-03-node-a
     command: mongod --port 27017  --shardsvr --replSet "Camilo" --bind_ip_all
     ports:
-      - 27129:27029
+      - 27129:27027
     networks:
       OurNetwork:
         ipv4_address: 25.3.189.100
@@ -38,7 +38,7 @@ services:
     container_name: Gm_Oeste #shard-03-node-b
     command: mongod --port 27017  --shardsvr --replSet "Camilo" --bind_ip_all
     ports:
-      - 27130:27030
+      - 27130:27017
     networks:
       OurNetwork:
         ipv4_address: 25.3.189.101
@@ -47,7 +47,7 @@ services:
     container_name: Gm_Este #shard-03-node-c
     command: mongod --port 27017  --shardsvr --replSet "Camilo" --bind_ip_all
     ports:
-      - 27131:27031
+      - 27131:27017
     networks:
       OurNetwork:
         ipv4_address: 25.3.189.102
@@ -56,7 +56,7 @@ services:
   Router_1:
     image: mongo
     container_name: Router_1
-    command: mongos --port 27017 --configdb rs-config-server/25.3.189.98:27017,25.3.189.99:27017 --bind_ip_all
+    command: mongos --port 27017 --configdb configrs/Config_1:27017,Config_2:27017 --bind_ip_all
     ports:
       - 27017:27017
     networks:
@@ -66,7 +66,7 @@ services:
   Router_2:
     image: mongo
     container_name: Router_2
-    command: mongos --port 27017 --configdb rs-config-server/25.3.189.98:27017,25.3.189.99:27017 --bind_ip_all
+    command: mongos --port 27017 --configdb configrs/Config_1:27017,Config_2:27017 --bind_ip_all
     ports:
       - 27018:27017
     networks:

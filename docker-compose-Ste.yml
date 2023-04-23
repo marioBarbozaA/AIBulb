@@ -5,7 +5,7 @@ services:
     container_name: Usa_South  #shard-03-node-a
     command: mongod --port 27017  --shardsvr --replSet "Stephanie" --bind_ip_all
     ports:
-      - 27126:27026
+      - 27126:27017
     networks:
       OurNetwork:
         ipv4_address: 25.3.188.49
@@ -15,7 +15,7 @@ services:
     container_name: Usa_West #shard-03-node-b
     command: mongod --port 27017  --shardsvr --replSet "Stephanie" --bind_ip_all
     ports:
-      - 27127:27027
+      - 27127:27017
     networks:
       OurNetwork:
         ipv4_address: 25.3.188.50
@@ -25,7 +25,7 @@ services:
     container_name: Usa_East #shard-03-node-c
     command: mongod --port 27017  --shardsvr --replSet "Stephanie" --bind_ip_all
     ports:
-      - 27128:27028
+      - 27128:27017
     networks:
       OurNetwork:
         ipv4_address: 25.3.188.51
