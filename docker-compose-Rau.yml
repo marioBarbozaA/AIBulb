@@ -9,7 +9,7 @@ services:
       - 27120:27020
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.6
+        ipv4_address: 25.19.99.56
 
   Mex_oeste:
     image: mongo
@@ -19,7 +19,7 @@ services:
       - 27121:27021
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.7
+        ipv4_address: 25.19.99.57
 
   Mex_Este:
     image: mongo
@@ -29,11 +29,11 @@ services:
       - 27122:27022
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.8
+        ipv4_address: 25.19.99.58
     
 networks:
   OurNetwork:
     driver: bridge
     ipam:
       config:
-        - subnet: 10.0.0.0/27
+        - subnet: 25.19.99.53/27
