@@ -51,7 +51,7 @@ services:
     Gm_Sur:
       image: mongo
       container_name: Gm_Sur  #shard-03-node-a
-      command: mongod --port 27021  --shardsvr --replSet "Camilo"
+      command: mongod --port  esto podría indicar que hay un problema en la red   --shardsvr --replSet "Camilo"
       ports:
         - 27126:27021
       networks:
