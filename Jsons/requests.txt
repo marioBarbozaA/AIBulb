@@ -1,0 +1,33 @@
+{
+  "prompt": "Busco servicios de electricidad o limpieza",
+  "geolocalizacion": true,
+  "ubicacionActual": {
+    "ciudad": "Ciudad de México",
+    "estado": "CDMX",
+    "pais": "México",
+    "coordenadas": {
+      "latitud": "19.4326",
+      "longitud": "-99.1332"
+    }
+  },
+  "serviciosEncontrados": [
+    {
+      "nombre": "Electricidad Express",
+      "logo": "https://ejemplo.com/logo-electricidad-express.jpg",
+      "categoria": "servicios",
+      "puntuacion": 4.5,
+      "direccion": "Calle 10 #25, Colonia Del Valle",
+      "telefono": "55 1234 5678",
+      "horario": "Lunes a Viernes 8:00 a 18:00"
+    },
+    {
+      "nombre": "Limpieza Total",
+      "logo": "https://ejemplo.com/logo-limpieza-total.jpg",
+      "categoria": "housekeeping",
+      "puntuacion": 3.9,
+      "direccion": "Av. Insurgentes #120, Colonia Roma",
+      "telefono": "55 2345 6789",
+      "horario": "Todos los días 9:00 a 21:00"
+    }
+  ]
+}
