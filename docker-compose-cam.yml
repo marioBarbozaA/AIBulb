@@ -1,45 +1,26 @@
 version: '3'
 services:
   
-  ## Router
-  Router_1:
-    image: mongo
-    container_name: Router_1
-    command: mongos --port 27017  --configdb rs-config-server/configsvr01:27017,configsvr02:27018 --bind_ip_all
-    ports:
-      - 27027:27017
-    networks:
-      OurNetwork:
-        ipv4_address: 10.0.0.2
-  Router_2:
-    image: mongo
-    container_name: Router_2
-    command: mongos --port 27017  --configdb rs-config-server/configsvr01:27017,configsvr02:27018 --bind_ip_all
-    ports:
-      - 27007:27018
-    networks:
-      OurNetwork:
-        ipv4_address: 10.0.0.3
-
   ## Config Servers
   Config_1:
     image: mongo
     container_name: Config_1
     command: mongod --port 27017  --configsvr --replSet rs-config-server --bind_ip_all # Falta Network
     ports:
-      - 27037:27019
+      - 27118:27018
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.4
+        ipv4_address: 25.3.189.98
+
   Config_2:
     image: mongo
     container_name: Config_2
     command: mongod --port 27017  --configsvr --replSet rs-config-server --bind_ip_all
     ports:
-      - 27047:27020
+      - 27119:27019
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.5
+        ipv4_address: 25.3.189.99
     
   ## Shard Servers
   Gm_Sur:
@@ -47,33 +28,53 @@ services:
     container_name: Gm_Sur  #shard-03-node-a
     command: mongod --port 27017  --shardsvr --replSet "Camilo" --bind_ip_all
     ports:
-      - 27126:27021
+      - 27129:27029
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.16
+        ipv4_address: 25.3.189.100
     
   Gm_Oeste:
     image: mongo
     container_name: Gm_Oeste #shard-03-node-b
     command: mongod --port 27017  --shardsvr --replSet "Camilo" --bind_ip_all
     ports:
-      - 27127:27022
+      - 27130:27030
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.17
+        ipv4_address: 25.3.189.101
   Gm_Este:
     image: mongo
     container_name: Gm_Este #shard-03-node-c
     command: mongod --port 27017  --shardsvr --replSet "Camilo" --bind_ip_all
     ports:
-      - 27128:27023
+      - 27131:27031
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.18
+        ipv4_address: 25.3.189.102
 
+  ## Router
+  Router_1:
+    image: mongo
+    container_name: Router_1
+    command: mongos --port 27017  --configdb rs-config-server/configsvr01:27017,configsvr02:27018 --bind_ip_all
+    ports:
+      - 27017:27017
+    networks:
+      OurNetwork:
+        ipv4_address: 25.3.189.103
+
+  Router_2:
+    image: mongo
+    container_name: Router_2
+    command: mongos --port 27017  --configdb rs-config-server/configsvr01:27017,configsvr02:27018 --bind_ip_all
+    ports:
+      - 27018:27017
+    networks:
+      OurNetwork:
+        ipv4_address: 25.3.189.104
 networks:
   OurNetwork:
     driver: bridge
     ipam:
       config:
-        - subnet: 10.0.0.0/27
+        - subnet: 25.3.189.113/27

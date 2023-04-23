@@ -4,39 +4,36 @@ services:
   Mex_Sur:
     image: mongo
     container_name: Mex_Sur #shard-01-node-a
-    command: mongod --port 27024  --shardsvr --replSet "Raulis"
+    command: mongod --port 27017  --shardsvr --replSet "Raulis" --bind_ip_all
     ports:
-      - 27117:27024
+      - 27120:27020
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.7
-    restart: always
-    links:
-      - Mex_oeste #shard01-b
-      - Mex_Este #shard01-c
+        ipv4_address: 25.19.99.56
+
   Mex_oeste:
     image: mongo
     container_name: Mex_oeste #shard-01-node-b
-    command: mongod --port 27025  --shardsvr --replSet "Raulis"
+    command: mongod --port 27017  --shardsvr --replSet "Raulis" --bind_ip_all
     ports:
-      - 27118:27025
+      - 27121:27021
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.8
-    restart: always
+        ipv4_address: 25.19.99.57
+
   Mex_Este:
     image: mongo
     container_name: Mex_Este #shard-01-node-c
-    command: mongod --port 27026  --shardsvr --replSet "Raulis"
+    command: mongod --port 27017  --shardsvr --replSet "Raulis" --bind_ip_all
     ports:
-      - 27119:27026
+      - 27122:27022
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.9
-    restart: always
+        ipv4_address: 25.19.99.58
+    
 networks:
   OurNetwork:
     driver: bridge
     ipam:
       config:
-        - subnet: 10.0.0.0/27
+        - subnet: 25.19.99.53/27

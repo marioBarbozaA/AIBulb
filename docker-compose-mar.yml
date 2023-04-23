@@ -3,40 +3,36 @@ services:
   CR_Sur:
     image: mongo
     container_name: CR_Sur #shard-02-node-a
-    command: mongod --port 27027  --shardsvr --replSet "CompuMario"
+    command: mongod --port 27017  --shardsvr --replSet "CompuMario" --bind_ip_all
     ports:
-      - 27120:27227
+      - 27123:27023
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.10
-    restart: always
-    links:
-      - CR_Oeste #shard02-b
-      - CR_Este #shard02-c
+        ipv4_address: 25.3.224.2
+
   CR_Oeste:
     image: mongo
     container_name: CR_Oeste #shard-02-node-b
-    command: mongod --port 27028  --shardsvr --replSet "CompuMario"
+    command: mongod --port 27017  --shardsvr --replSet "CompuMario" --bind_ip_all
     ports:
-      - 27121:27028
+      - 27124:27024
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.11
-    restart: always
+        ipv4_address: 25.3.224.3
+
   CR_Este:
     image: mongo
     container_name: "CR_Este" #shard-02-node-c
-    command: mongod --port 27029  --shardsvr --replSet "CompuMario"
+    command: mongod --port 27017  --shardsvr --replSet "CompuMario" --bind_ip_all
     ports:
-      - 27122:27029
+      - 27125:27025
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.12
-    restart: always
+        ipv4_address: 25.3.224.4
     
 networks:
   OurNetwork:
     driver: bridge
     ipam:
       config:
-        - subnet: 10.0.0.0/27
+        - subnet: 25.3.224.0/27

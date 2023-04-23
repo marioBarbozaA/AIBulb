@@ -1,4 +1,4 @@
-
+// Parte Camilo
 #Initializing replica set for config servers...
 
 rs.initiate(
@@ -6,8 +6,8 @@ rs.initiate(
     _id: "rs-config-server",
     configsvr: true,
     members: [
-      { _id : 0, host : "25.3.189.113:27037" },
-      { _id : 1, host : "25.3.224.0:27047" }
+      { _id : 0, host : "25.3.189.98:27017" },
+      { _id : 1, host : "25.3.189.99:27017" }
     ]
   }
 );
@@ -17,9 +17,53 @@ rs.initiate(
   {
     _id : "Camilo",
     members: [
-      { _id : 0, host : "25.3.189.113:27017" },
-      { _id : 1, host : "25.3.189.113:27017" },
-      { _id : 2, host : "25.3.189.113:27017" } 
+      { _id : 0, host : "25.3.189.100:27017" },
+      { _id : 1, host : "25.3.189.101:27017" },
+      { _id : 2, host : "25.3.189.102:27017" } 
     ]
   }
 );
+
+
+//Mario
+
+rs.initiate(
+  {
+    _id : "CompuMario",
+    members: [
+      { _id : 0, host : "25.3.224.2:27017" },
+      { _id : 1, host : "25.3.224.3:27017" },
+      { _id : 2, host : "25.3.224.4:27017" } 
+    ]
+  }
+);
+
+//Raul
+
+rs.initiate(
+  {
+    _id : "Raulis",
+    members: [
+      { _id : 0, host : "25.19.99.56:27017" },
+      { _id : 1, host : "25.19.99.57:27017" },
+      { _id : 2, host : "25.19.99.58:27017" } 
+    ]
+  }
+);
+
+
+// Stephanie
+
+rs.initiate(
+  {
+    _id : "Stephanie",
+    members: [
+      { _id : 0, host : "25.3.188.49:27017" },
+      { _id : 1, host : "25.3.188.50:27017" },
+      { _id : 2, host : "25.3.188.51:27017" } 
+    ]
+  }
+);
+
+// Camilo
+#Initializing routers...

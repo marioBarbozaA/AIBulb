@@ -3,35 +3,32 @@ services:
   Usa_South:
     image: mongo
     container_name: Usa_South  #shard-03-node-a
-    command: mongod --port 27030  --shardsvr --replSet "Stephanie"
+    command: mongod --port 27017  --shardsvr --replSet "Stephanie" --bind_ip_all
     ports:
-      - 27123:27030
+      - 27126:27026
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.13
-    restart: always
+        ipv4_address: 25.3.188.49
 
   Usa_West:
     image: mongo
     container_name: Usa_West #shard-03-node-b
-    command: mongod --port 27031  --shardsvr --replSet "Stephanie"
+    command: mongod --port 27017  --shardsvr --replSet "Stephanie" --bind_ip_all
     ports:
-      - 27124:27031
+      - 27127:27027
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.14
-    restart: always
+        ipv4_address: 25.3.188.50
     
   Usa_East:
     image: mongo
     container_name: Usa_East #shard-03-node-c
-    command: mongod --port 27032  --shardsvr --replSet "Stephanie"
+    command: mongod --port 27017  --shardsvr --replSet "Stephanie" --bind_ip_all
     ports:
-      - 27125:27032
+      - 27128:27028
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.15
-    restart: always
+        ipv4_address: 25.3.188.51
 
       
 networks:
@@ -39,4 +36,4 @@ networks:
     driver: bridge
     ipam:
       config:
-        - subnet: 10.0.0.0/27
+        - subnet: 25.3.188.46/27
