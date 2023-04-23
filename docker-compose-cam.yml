@@ -10,7 +10,7 @@ services:
       - 27118:27018
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.4
+        ipv4_address: 25.3.189.98
 
   Config_2:
     image: mongo
@@ -20,7 +20,7 @@ services:
       - 27119:27019
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.5
+        ipv4_address: 25.3.189.99
     
   ## Shard Servers
   Gm_Sur:
@@ -31,7 +31,7 @@ services:
       - 27129:27029
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.15
+        ipv4_address: 25.3.189.100
     
   Gm_Oeste:
     image: mongo
@@ -41,7 +41,7 @@ services:
       - 27130:27030
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.16
+        ipv4_address: 25.3.189.101
   Gm_Este:
     image: mongo
     container_name: Gm_Este #shard-03-node-c
@@ -50,7 +50,7 @@ services:
       - 27131:27031
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.17
+        ipv4_address: 25.3.189.102
 
   ## Router
   Router_1:
@@ -61,7 +61,7 @@ services:
       - 27017:27017
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.2
+        ipv4_address: 25.3.189.103
 
   Router_2:
     image: mongo
@@ -71,10 +71,10 @@ services:
       - 27018:27017
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.3
+        ipv4_address: 25.3.189.104
 networks:
   OurNetwork:
     driver: bridge
     ipam:
       config:
-        - subnet: 10.0.0.0/27
+        - subnet: 25.3.189.113/27
