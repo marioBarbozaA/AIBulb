@@ -202,3 +202,4 @@ docker stop kevinnunez
 docker stop dispconf1
 docker stop dispconf2
 
+command:mongos -d -p 27017:27017 mongo --port 27017 --configdb rs-config-server/25.3.189.98:27017,25.3.189.99:27017
