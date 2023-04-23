@@ -8,7 +8,7 @@ services:
       - 27123:27017
     networks:
       OurNetwork:
-        ipv4_address: 25.3.224.2
+        ipv4_address: 10.0.0.9
 
   CR_Oeste:
     image: mongo
@@ -18,7 +18,7 @@ services:
       - 27124:27017
     networks:
       OurNetwork:
-        ipv4_address: 25.3.224.3
+        ipv4_address: 10.0.0.10
 
   CR_Este:
     image: mongo
@@ -28,11 +28,11 @@ services:
       - 27125:27017
     networks:
       OurNetwork:
-        ipv4_address: 25.3.224.4
+        ipv4_address: 10.0.0.11
     
 networks:
   OurNetwork:
     driver: bridge
     ipam:
       config:
-        - subnet: 25.3.224.0/27
+        - subnet: 10.0.0.0/27
