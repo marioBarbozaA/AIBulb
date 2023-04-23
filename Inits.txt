@@ -3,7 +3,7 @@
 
 rs.initiate(
   {
-    _id: "rs-config-server",
+    _id: "configrs",
     configsvr: true,
     members: [
       { _id : 0, host : "25.3.189.98:27017" },
@@ -23,6 +23,22 @@ rs.initiate(
     ]
   }
 );
+
+// Camilo
+#Initializing routers...
+
+sh.addShard( "Camilo/25.3.189.98:27017")
+sh.addShard( "CompuMario/25.3.224.2")
+sh.addShard( "Raulis/25.19.99.56")
+sh.addShard( "Stephanie/25.19.99.56")
+
+# addShardTag
+
+sh.addShardTag("Camilo", "Guatemala");
+sh.addShardTag("CompuMario", "Costa Rica");
+sh.addShardTag("Raulis", "Mexico");
+sh.addShardTag("Stephanie", "Estado Unidos");
+
 
 
 //Mario
@@ -65,5 +81,4 @@ rs.initiate(
   }
 );
 
-// Camilo
-#Initializing routers...
+
