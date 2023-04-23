@@ -24,6 +24,22 @@ rs.initiate(
   }
 );
 
+// Camilo
+#Initializing routers...
+
+rs.add( "Camilo/25.3.189.98:27017")
+rs.add( "CompuMario/25.3.224.2")
+rs.add( "Raulis/25.19.99.56")
+rs.add( "Stephanie/25.19.99.56")
+
+# addShardTag
+
+sh.addShardTag("Camilo", "Guatemala");
+sh.addShardTag("CompuMario", "Costa Rica");
+sh.addShardTag("Raulis", "Mexico");
+sh.addShardTag("Stephanie", "Estado Unidos");
+
+
 
 //Mario
 
@@ -65,5 +81,4 @@ rs.initiate(
   }
 );
 
-// Camilo
-#Initializing routers...
+
