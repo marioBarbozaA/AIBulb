@@ -3,7 +3,7 @@ services:
   Usa_South:
     image: mongo
     container_name: Usa_South  #shard-03-node-a
-    command: mongod --port 27017  --shardsvr --replSet "Stephanie"
+    command: mongod --port 27017  --shardsvr --replSet "Stephanie" --bind_ip_all
     ports:
       - 27126:27026
     networks:
@@ -13,7 +13,7 @@ services:
   Usa_West:
     image: mongo
     container_name: Usa_West #shard-03-node-b
-    command: mongod --port 27017  --shardsvr --replSet "Stephanie"
+    command: mongod --port 27017  --shardsvr --replSet "Stephanie" --bind_ip_all
     ports:
       - 27127:27027
     networks:
@@ -23,7 +23,7 @@ services:
   Usa_East:
     image: mongo
     container_name: Usa_East #shard-03-node-c
-    command: mongod --port 27017  --shardsvr --replSet "Stephanie"
+    command: mongod --port 27017  --shardsvr --replSet "Stephanie" --bind_ip_all
     ports:
       - 27128:27028
     networks:

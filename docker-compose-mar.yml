@@ -3,7 +3,7 @@ services:
   CR_Sur:
     image: mongo
     container_name: CR_Sur #shard-02-node-a
-    command: mongod --port 27017  --shardsvr --replSet "CompuMario"
+    command: mongod --port 27017  --shardsvr --replSet "CompuMario" --bind_ip_all
     ports:
       - 27123:27023
     networks:
@@ -13,7 +13,7 @@ services:
   CR_Oeste:
     image: mongo
     container_name: CR_Oeste #shard-02-node-b
-    command: mongod --port 27017  --shardsvr --replSet "CompuMario"
+    command: mongod --port 27017  --shardsvr --replSet "CompuMario" --bind_ip_all
     ports:
       - 27124:27024
     networks:
@@ -23,7 +23,7 @@ services:
   CR_Este:
     image: mongo
     container_name: "CR_Este" #shard-02-node-c
-    command: mongod --port 27017  --shardsvr --replSet "CompuMario"
+    command: mongod --port 27017  --shardsvr --replSet "CompuMario" --bind_ip_all
     ports:
       - 27125:27025
     networks:
