@@ -6,8 +6,8 @@ rs.initiate(
     _id: "configrs",
     configsvr: true,
     members: [
-      { _id : 0, host : "10.0.0.2:27017" },
-      { _id : 1, host : "10.0.0.3:27017" }
+      { _id : 0, host : "25.3.189.113:27119" },
+      { _id : 1, host : "25.3.189.113:27120" }
     ]
   }
 );
@@ -17,18 +17,18 @@ rs.initiate(
   {
     _id : "Camilo",
     members: [
-      { _id : 0, host : "10.0.0.15:27017" },
-      { _id : 1, host : "10.0.0.16:27017" },
-      { _id : 2, host : "10.0.0.17:27017" } 
+      { _id : 0, host : "25.3.189.113:27130" },
+      { _id : 1, host : "25.3.189.113:27131" },
+      { _id : 2, host : "25.3.189.113:27132" } 
     ]
   }
 );
 
 // Camilo
 #Initializing routers...
+sh.addShard( "CompuMario/25.3.224.0:27017")
 
-sh.addShard( "Camilo/10.0.0.15:27017")
-sh.addShard( "CompuMario/25.3.224.2")
+sh.addShard( "CompuMario/10.0.0.9:27017")
 sh.addShard( "Raulis/25.19.99.56")
 sh.addShard( "repStephanie/25.19.99.56")
 
@@ -48,9 +48,9 @@ rs.initiate(
   {
     _id : "CompuMario",
     members: [
-      { _id : 0, host : "10.0.0.9:27017" },
-      { _id : 1, host : "10.0.0.10:27017" },
-      { _id : 2, host : "10.0.0.11:27017" } 
+      { _id : 0, host : "25.3.224.0:27123" },
+      { _id : 1, host : "25.3.224.0:27124" },
+      { _id : 2, host : "25.3.224.0:27125" } 
     ]
   }
 );

@@ -1,0 +1,11 @@
+// borrar container
+
+docker container rm -f $(docker container ls -aq)
+
+//borrar subnet 
+
+docker network rm aibulb_OurNetwork
+
+//Borrar todos los volumenes
+docker volume prune
+y
