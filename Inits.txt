@@ -40,10 +40,42 @@ sh.addShardTag("Stephanie", "Estado Unidos");
 
 # addTagRange
 sh.addTagRange( "disponibles.servicios",
+                { pais: "Guatemala"},
+                { pais: "Guatemala1"},
+                "Guatemala"
+              );
+
+sh.addTagRange( "disponibles.servicios",
                 { pais: "Costa Rica"},
                 { pais: "Costa Rica1"},
                 "Costa Rica"
               );
+
+sh.addTagRange( "disponibles.servicios",
+                { pais: "Mexico"},
+                { pais: "Mexico1"},
+                "Mexico"
+              );
+
+sh.addTagRange( "disponibles.servicios",
+                { pais: "Estado Unidos"},
+                { pais: "Estado Unidos1"},
+                "Estado Unidos"
+              );
+              
+# router
+sh.enableSharding("disponibles");
+
+sh.shardCollection("disponibles.servicios", { pais : 1 } );
+
+db.adminCommand({
+  "setDefaultRWConcern" : 1,
+  "defaultWriteConcern" : {
+    "w" : 2
+  },
+  "defaultReadConcern" : { "level" : "available" }
+});
+
 
 //Mario
 
