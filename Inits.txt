@@ -26,11 +26,10 @@ rs.initiate(
 
 // Camilo
 #Initializing routers...
-sh.addShard( "CompuMario/25.3.224.0:27017")
-
-sh.addShard( "CompuMario/10.0.0.9:27017")
-sh.addShard( "Raulis/25.19.99.56")
-sh.addShard( "repStephanie/25.19.99.56")
+sh.addShard( "Camilo/25.3.189.113:27130")
+sh.addShard( "CompuMario/25.3.224.0:27123")
+sh.addShard( "Raulis/25.19.99.56:27120")
+sh.addShard( "repStephanie/25.19.99.56:27126")
 
 # addShardTag
 
@@ -39,8 +38,12 @@ sh.addShardTag("CompuMario", "Costa Rica");
 sh.addShardTag("Raulis", "Mexico");
 sh.addShardTag("Stephanie", "Estado Unidos");
 
-mongodb://25.3.188.46:27017,25.3.189.113:27017,25.19.99.53:27017/?replicaSet=rs0
-
+# addTagRange
+sh.addTagRange( "disponibles.servicios",
+                { pais: "Costa Rica"},
+                { pais: "Costa Rica1"},
+                "Costa Rica"
+              );
 
 //Mario
 
@@ -61,9 +64,9 @@ rs.initiate(
   {
     _id : "Raulis",
     members: [
-      { _id : 0, host : "10.0.0.6:27017" },
-      { _id : 1, host : "10.0.0.7:27017" },
-      { _id : 2, host : "10.0.0.8:27017" } 
+      { _id : 0, host : "25.19.99.53:27120" },
+      { _id : 1, host : "25.19.99.53:27121" },
+      { _id : 2, host : "25.19.99.53:27122" } 
     ]
   }
 );
@@ -75,9 +78,9 @@ rs.initiate(
   {
     _id : "Stephanie",
     members: [
-      { _id : 0, host : "10.0.0.12:27017" },
-      { _id : 1, host : "10.0.0.13:27017" },
-      { _id : 2, host : "10.0.0.14:27017" } 
+      { _id : 0, host : "25.3.188.46:27126" },
+      { _id : 1, host : "25.3.188.46:27127" },
+      { _id : 2, host : "25.3.188.46:27128" } 
     ]
   }
 );
