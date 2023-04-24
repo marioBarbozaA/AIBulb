@@ -7,4 +7,3 @@ docker network rm aibulb_OurNetwork
 
 
 docker volume prune
-y

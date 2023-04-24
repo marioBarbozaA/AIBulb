@@ -29,7 +29,7 @@ rs.initiate(
 #Initializing routers... (rs)
 sh.addShard( "Camilo/25.3.189.113:27130")
 sh.addShard( "CompuMario/25.3.224.0:27124")
-sh.addShard( "Raulis/25.19.99.56:27121")
+sh.addShard( "Raulis/25.19.99.53:27121")
 sh.addShard( "Stephanie/25.3.188.46:27127")
 
 # addShardTag
