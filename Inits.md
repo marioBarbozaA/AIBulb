@@ -117,9 +117,6 @@ rs.initiate(
     ]
   }
 );
-## arbitro
-rs.addArb("25.3.224.0:27134");
-
 
 ```
 #### arbitro de Mario
