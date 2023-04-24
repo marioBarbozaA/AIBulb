@@ -18,7 +18,7 @@ rs.initiate(
   {
     _id : "Camilo",
     members: [
-      { _id : 0, host : "25.3.189.113:27130" },
+      { _id : 0, host : "z25.3.189.113:27130" },
       { _id : 1, host : "25.3.189.113:27131" },
       { _id : 2, host : "25.3.189.113:27132" } 
     ]
@@ -26,7 +26,7 @@ rs.initiate(
 );
 
 // Camilo
-#Initializing routers...
+#Initializing routers... (rs)
 sh.addShard( "Camilo/25.3.189.113:27130")
 sh.addShard( "CompuMario/25.3.224.0:27123")
 sh.addShard( "Raulis/25.19.99.56:27120")
