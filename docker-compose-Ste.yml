@@ -29,15 +29,16 @@ services:
     networks:
       OurNetwork:
         ipv4_address: 10.0.0.14
-
+  ## Arbiters
   USA_Arb:
     image: mongo
+    container_name: Mar_arb
+    command: mongod --port 27017 --replSet "CompuMario" --bind_ip_all --oplogSize 64
     ports:
-      - 27135:27017
-    command: mongod --replSet "Stephanie" --port 27017 --bind_ip_all --noprealloc --smallfiles --oplogSize 0 --replSet "rs0" --oplogSize 0  --nojournal
+      - 27134:27017
     networks:
       OurNetwork:
-          ipv4_address: 10.0.0.20
+        ipv4_address: 10.0.0.20
 
 networks:
   OurNetwork:
