@@ -1,4 +1,5 @@
 // Parte Camilo
+docker-compose -f docker-compose-cam.yml up -d
 #Initializing replica set for config servers...
 
 rs.initiate(
@@ -17,7 +18,7 @@ rs.initiate(
   {
     _id : "Camilo",
     members: [
-      { _id : 0, host : "25.3.189.113:27130" },
+      { _id : 0, host : "z25.3.189.113:27130" },
       { _id : 1, host : "25.3.189.113:27131" },
       { _id : 2, host : "25.3.189.113:27132" } 
     ]
@@ -25,7 +26,7 @@ rs.initiate(
 );
 
 // Camilo
-#Initializing routers...
+#Initializing routers... (rs)
 sh.addShard( "Camilo/25.3.189.113:27130")
 sh.addShard( "CompuMario/25.3.224.0:27123")
 sh.addShard( "Raulis/25.19.99.56:27120")
@@ -81,7 +82,7 @@ rs.addArb("25.3.189.113:27136");
 
 
 //Mario
-
+docker-compose -f docker-compose-mar.yml up -d
 rs.initiate(
   {
     _id : "CompuMario",
@@ -96,8 +97,10 @@ rs.initiate(
 rs.addArb("25.3.224.0:27134");
 
 
-//Raul
+rs.addArb("25.3.224.0:27123");
 
+//Raul
+docker-compose -f docker-compose-rau.yml up -d
 rs.initiate(
   {
     _id : "Raulis",
@@ -108,9 +111,10 @@ rs.initiate(
     ]
   }
 );
-
+rs.addArb("25.19.99.53:27120");
 
 // Stephanie
+docker-compose -f docker-compose-ste.yml up -d
 
 rs.initiate(
   {
@@ -123,4 +127,4 @@ rs.initiate(
   }
 );
 
-
+rs.addArb("25.3.188.46:27126");
