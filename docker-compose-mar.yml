@@ -30,14 +30,17 @@ services:
       OurNetwork:
         ipv4_address: 10.0.0.11
 
-  CR_Arb:
+  ## Arbiters
+  Mar_arb:
     image: mongo
+    container_name: Mar_arb
+    command: mongod --port 27017 --replSet "CompuMario" --bind_ip_all --oplogSize 64
     ports:
       - 27134:27017
-    command: mongod --replSet "CompuMario" --port 27017 --bind_ip_all --noprealloc --smallfiles --oplogSize 0 --replSet "rs0" --oplogSize 0  --nojournal
     networks:
       OurNetwork:
-          ipv4_address: 10.0.0.19
+        ipv4_address: 10.0.0.19
+
 networks:
   OurNetwork:
     driver: bridge
