@@ -30,7 +30,16 @@ services:
     networks:
       OurNetwork:
         ipv4_address: 10.0.0.8
-    
+
+  Mex_Arb:
+    image: mongo
+    ports:
+      - 27133:27017
+    command: mongod --replSet "Raulis" --port 27017 --bind_ip_all --smallfiles --oplogSize 0 --replSet "rs0" --oplogSize 0  --nojournal
+    networks:
+      OurNetwork:
+          ipv4_address: 10.0.0.18
+
 networks:
   OurNetwork:
     driver: bridge
