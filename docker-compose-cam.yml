@@ -78,6 +78,16 @@ services:
       - Config_1
       - Config_2
       
+  Gm_Arb:
+    image: mongo
+    container_name: Gm_Arb
+    command: mongod --port 27017 --replSet "Camilo" --bind_ip_all --oplogSize 64
+    ports:
+      - 27136:27017
+    networks:
+      OurNetwork:
+        ipv4_address: 10.0.0.21
+
 networks:
   OurNetwork:
     driver: bridge

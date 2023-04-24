@@ -93,6 +93,8 @@ rs.initiate(
   }
 );
 
+rs.addArb("25.3.224.0:27123");
+
 //Raul
 
 rs.initiate(
@@ -105,7 +107,7 @@ rs.initiate(
     ]
   }
 );
-
+rs.addArb("25.19.99.53:27120");
 
 // Stephanie
 
@@ -120,4 +122,4 @@ rs.initiate(
   }
 );
 
-
+rs.addArb("25.3.188.46:27126");
