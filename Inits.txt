@@ -29,7 +29,7 @@ rs.initiate(
 #Initializing routers... (rs)
 sh.addShard( "Camilo/25.3.189.113:27130")
 sh.addShard( "CompuMario/25.3.224.0:27124")
-sh.addShard( "Raulis/25.19.99.56:27121")
+sh.addShard( "Raulis/25.19.99.53:27121")
 sh.addShard( "Stephanie/25.3.188.46:27127")
 
 # addShardTag
@@ -64,7 +64,6 @@ sh.addTagRange( "disponibles.servicios",
                 "Estado Unidos"
               );
               
-# router
 sh.enableSharding("disponibles");
 
 sh.shardCollection("disponibles.servicios", { pais : 1 } );
@@ -94,7 +93,7 @@ rs.initiate(
   }
 );
 
-rs.addArb("25.3.224.0:27124");
+rs.addArb("25.3.224.0:27134");
 
 //Raul
 docker-compose -f docker-compose-rau.yml up -d
@@ -109,7 +108,7 @@ rs.initiate(
   }
 );
 
-rs.addArb("25.19.99.53:27121");
+rs.addArb("25.19.99.53:27133");
 
 // Stephanie
 docker-compose -f docker-compose-ste.yml up -d
