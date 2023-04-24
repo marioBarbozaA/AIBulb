@@ -1,4 +1,5 @@
 // Parte Camilo
+docker-compose -f docker-compose-cam.yml up -d
 #Initializing replica set for config servers...
 
 rs.initiate(
@@ -81,7 +82,7 @@ rs.addArb("25.3.189.113:27136");
 
 
 //Mario
-
+docker-compose -f docker-compose-mar.yml up -d
 rs.initiate(
   {
     _id : "CompuMario",
@@ -96,7 +97,7 @@ rs.initiate(
 rs.addArb("25.3.224.0:27123");
 
 //Raul
-
+docker-compose -f docker-compose-rau.yml up -d
 rs.initiate(
   {
     _id : "Raulis",
@@ -110,6 +111,7 @@ rs.initiate(
 rs.addArb("25.19.99.53:27120");
 
 // Stephanie
+docker-compose -f docker-compose-ste.yml up -d
 
 rs.initiate(
   {
