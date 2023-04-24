@@ -1,7 +1,13 @@
-// Parte Camilo
+# Inits 
+*Aquí se inicializarán todo lo necesario para el funcionamiento del sharding*
+## Camilo
+*Aquí se inicializa el compose del host principal*
+```python
 docker-compose -f docker-compose-cam.yml up -d
-#Initializing replica set for config servers...
+```
 
+### Initializing replica set for config servers
+```python
 rs.initiate(
   {
     _id: "configrs",
@@ -12,8 +18,11 @@ rs.initiate(
     ]
   }
 );
+```
 
-#Initializing replica set for mongos...
+
+### Initializing replica set from Camilo
+```python
 rs.initiate(
   {
     _id : "Camilo",
@@ -24,22 +33,31 @@ rs.initiate(
     ]
   }
 );
+```
 
-// Camilo
-#Initializing routers... (rs)
+#### Initializing routers... (router)
+```python
 sh.addShard( "Camilo/25.3.189.113:27130")
 sh.addShard( "CompuMario/25.3.224.0:27124")
 sh.addShard( "Raulis/25.19.99.53:27121")
 sh.addShard( "Stephanie/25.3.188.46:27127")
+```
 
-# addShardTag
+#### addShardTag
+*Se inicializan cuando se hacen los iniciate de todos shards independientes (router)*
 
+```python
 sh.addShardTag("Camilo", "Guatemala");
 sh.addShardTag("CompuMario", "Costa Rica");
 sh.addShardTag("Raulis", "Mexico");
 sh.addShardTag("Stephanie", "Estado Unidos");
 
-# addTagRange
+```
+#### addTagRange
+*Se inicializan cuando se hacen los initiate de todos shards independientes (router)*
+
+```python
+#Se hace seguido del addSharTag
 sh.addTagRange( "disponibles.servicios",
                 { pais: "Guatemala"},
                 { pais: "Guatemala1"},
@@ -63,11 +81,11 @@ sh.addTagRange( "disponibles.servicios",
                 { pais: "Estado Unidos1"},
                 "Estado Unidos"
               );
-              
+# Se hace seguido del addTagRange              
 sh.enableSharding("disponibles");
-
+# Se hace seguido del enableSharding
 sh.shardCollection("disponibles.servicios", { pais : 1 } );
-
+# Se hace seguido del shardCollection
 db.adminCommand({
   "setDefaultRWConcern" : 1,
   "defaultWriteConcern" : {
@@ -75,13 +93,20 @@ db.adminCommand({
   },
   "defaultReadConcern" : { "level" : "available" }
 });
+```
 
-## arbitro
+#### arbitro de Camilo 
+```python
 rs.addArb("25.3.189.113:27136");
 
+```
 
-//Mario
+## Mario
+```python
 docker-compose -f docker-compose-mar.yml up -d
+```
+#### Inicializar replica set de Mario
+```python
 rs.initiate(
   {
     _id : "CompuMario",
@@ -93,10 +118,19 @@ rs.initiate(
   }
 );
 
+```
+#### arbitro de Mario
+```python
 rs.addArb("25.3.224.0:27134");
 
-//Raul
+```
+
+## Raul
+```python
 docker-compose -f docker-compose-rau.yml up -d
+```
+#### Inicializar replica set de Raul
+```python
 rs.initiate(
   {
     _id : "Raulis",
@@ -107,11 +141,21 @@ rs.initiate(
     ]
   }
 );
+  
+  ```
 
+#### arbitro de Raul
+```python
 rs.addArb("25.19.99.53:27133");
+  
+  ```
 
-// Stephanie
+## Stephanie
+```python
 docker-compose -f docker-compose-ste.yml up -d
+```
+#### Inicializar replica set de Stephanie
+```python
 
 rs.initiate(
   {
@@ -124,4 +168,9 @@ rs.initiate(
   }
 );
 
-rs.addArb("25.3.188.46:27127");
+```
+#### arbitro de Stephanie
+```python
+rs.addArb("25.3.188.46:27135");
+
+```
