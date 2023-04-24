@@ -36,7 +36,7 @@ services:
     container_name: Mex_Arb
     command: mongod --port 27017 --replSet "Raulis" --bind_ip_all --oplogSize 64
     ports:
-      - 27134:27017
+      - 27133:27017
     networks:
       OurNetwork:
           ipv4_address: 10.0.0.18

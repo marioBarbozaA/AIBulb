@@ -18,7 +18,7 @@ rs.initiate(
   {
     _id : "Camilo",
     members: [
-      { _id : 0, host : "z25.3.189.113:27130" },
+      { _id : 0, host : "25.3.189.113:27130" },
       { _id : 1, host : "25.3.189.113:27131" },
       { _id : 2, host : "25.3.189.113:27132" } 
     ]
@@ -28,9 +28,9 @@ rs.initiate(
 // Camilo
 #Initializing routers... (rs)
 sh.addShard( "Camilo/25.3.189.113:27130")
-sh.addShard( "CompuMario/25.3.224.0:27123")
-sh.addShard( "Raulis/25.19.99.56:27120")
-sh.addShard( "repStephanie/25.19.99.56:27126")
+sh.addShard( "CompuMario/25.3.224.0:27124")
+sh.addShard( "Raulis/25.19.99.56:27121")
+sh.addShard( "Stephanie/25.3.188.46:27127")
 
 # addShardTag
 
@@ -87,14 +87,14 @@ rs.initiate(
   {
     _id : "CompuMario",
     members: [
-      { _id : 0, host : "25.3.224.0:27123" },
-      { _id : 1, host : "25.3.224.0:27124" },
-      { _id : 2, host : "25.3.224.0:27125" } 
+      { _id : 0, host : "25.3.224.0:27124" },
+      { _id : 1, host : "25.3.224.0:27125" },
+      { _id : 2, host : "25.3.224.0:27126" } 
     ]
   }
 );
 
-rs.addArb("25.3.224.0:27123");
+rs.addArb("25.3.224.0:27124");
 
 //Raul
 docker-compose -f docker-compose-rau.yml up -d
@@ -102,13 +102,14 @@ rs.initiate(
   {
     _id : "Raulis",
     members: [
-      { _id : 0, host : "25.19.99.53:27120" },
-      { _id : 1, host : "25.19.99.53:27121" },
-      { _id : 2, host : "25.19.99.53:27122" } 
+      { _id : 0, host : "25.19.99.53:27121" },
+      { _id : 1, host : "25.19.99.53:27122" },
+      { _id : 2, host : "25.19.99.53:27123" } 
     ]
   }
 );
-rs.addArb("25.19.99.53:27120");
+
+rs.addArb("25.19.99.53:27121");
 
 // Stephanie
 docker-compose -f docker-compose-ste.yml up -d
@@ -117,11 +118,11 @@ rs.initiate(
   {
     _id : "Stephanie",
     members: [
-      { _id : 0, host : "25.3.188.46:27126" },
-      { _id : 1, host : "25.3.188.46:27127" },
-      { _id : 2, host : "25.3.188.46:27128" } 
+      { _id : 0, host : "25.3.188.46:27127" },
+      { _id : 1, host : "25.3.188.46:27128" },
+      { _id : 2, host : "25.3.188.46:27129" } 
     ]
   }
 );
 
-rs.addArb("25.3.188.46:27126");
+rs.addArb("25.3.188.46:27127");
