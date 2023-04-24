@@ -7,7 +7,7 @@ services:
     container_name: Config_1
     command: mongod --port 27017  --configsvr --replSet "configrs" --dbpath /data/configdb --bind_ip_all # Falta Network
     ports:
-      - 27118:27017
+      - 27119:27017
     networks:
       OurNetwork:
         ipv4_address: 10.0.0.2
@@ -17,7 +17,7 @@ services:
     container_name: Config_2
     command: mongod --port 27017  --configsvr --replSet "configrs" --dbpath /data/configdb --bind_ip_all
     ports:
-      - 27119:27017
+      - 27120:27017
     networks:
       OurNetwork:
         ipv4_address: 10.0.0.3
@@ -28,7 +28,7 @@ services:
     container_name: Gm_Sur  #shard-03-node-a
     command: mongod --port 27017  --shardsvr --replSet "Camilo" --bind_ip_all
     ports:
-      - 27129:27027
+      - 27130:27017
     networks:
       OurNetwork:
         ipv4_address: 10.0.0.15
@@ -38,7 +38,7 @@ services:
     container_name: Gm_Oeste #shard-03-node-b
     command: mongod --port 27017  --shardsvr --replSet "Camilo" --bind_ip_all
     ports:
-      - 27130:27017
+      - 27131:27017
     networks:
       OurNetwork:
         ipv4_address: 10.0.0.16
@@ -47,10 +47,10 @@ services:
     container_name: Gm_Este #shard-03-node-c
     command: mongod --port 27017  --shardsvr --replSet "Camilo" --bind_ip_all
     ports:
-      - 27131:27017
+      - 27132:27017
     networks:
       OurNetwork:
-        ipv4_address: 10.0.0.17
+        ipv4_address: 10.0.0.17    
 
   ## Router
   Router_1:
@@ -62,7 +62,9 @@ services:
     networks:
       OurNetwork:
         ipv4_address: 10.0.0.4
-
+    depends_on:
+      - Config_1
+      - Config_2
   Router_2:
     image: mongo
     container_name: Router_2
@@ -72,7 +74,9 @@ services:
     networks:
       OurNetwork:
         ipv4_address: 10.0.0.5
-
+    depends_on:
+      - Config_1
+      - Config_2
 networks:
   OurNetwork:
     driver: bridge
