@@ -33,10 +33,10 @@ services:
   CR_Arb:
     image: mongo
     ports:
-      - 27133:27017
-    command: mongod --replSet "CompuMario" --port 27017 --bind_ip_all --noprealloc --smallfiles --oplogSize 128 
+      - 27134:27017
+    command: mongod --replSet "CompuMario" --port 27017 --bind_ip_all --noprealloc --smallfiles --oplogSize 0 --replSet "rs0" --oplogSize 0  --nojournal
     networks:
-      - OurNetwork:
+      OurNetwork:
           ipv4_address: 10.0.0.19
 networks:
   OurNetwork:

@@ -76,6 +76,9 @@ db.adminCommand({
   "defaultReadConcern" : { "level" : "available" }
 });
 
+## arbitro
+rs.addArb("25.3.189.113:27136");
+
 
 //Mario
 

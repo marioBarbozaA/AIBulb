@@ -33,10 +33,10 @@ services:
   USA_Arb:
     image: mongo
     ports:
-      - 27134:27017
-    command: mongod --replSet "Camilo" --port 27017 --bind_ip_all --noprealloc --smallfiles --oplogSize 128 
+      - 27135:27017
+    command: mongod --replSet "Stephanie" --port 27017 --bind_ip_all --noprealloc --smallfiles --oplogSize 0 --replSet "rs0" --oplogSize 0  --nojournal
     networks:
-      - OurNetwork:
+      OurNetwork:
           ipv4_address: 10.0.0.20
 
 networks:
