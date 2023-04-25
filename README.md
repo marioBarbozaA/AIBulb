@@ -7,7 +7,7 @@ Este proyecto tiene como objetivo implementar Sharding en una base de datos de M
 - Camilo Sanchez
 - Raúl Sanabría
 ### Instrucciones
-Para saber cómo implementar el Sharding en MongoDB, por favor revisa el archivo [instructions.md](instructions.md) que se encuentra en la raíz del repositorio.
+Para saber cómo implementar el Sharding en MongoDB, por favor revisa el archivo [instructions.md](https://github.com/marioBarbozaA/AIBulb/blob/main/Instructions.md) que se encuentra en la raíz del repositorio.
 
 ### Contribuir
 Si deseas contribuir a este proyecto, por favor sigue estos pasos:
