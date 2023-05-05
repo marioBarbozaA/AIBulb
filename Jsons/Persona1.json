@@ -6,7 +6,7 @@
       "prompt": "Busco servicios de electricidad o limpieza",
       "hora": "15:30",
       "fecha": "2023-05-05",
-      "geolocalizacion": true,
+      "geolocalizacion": "true",
       "ubicacionActual": {
         "ciudad": "Ciudad de México",
         "estado": "CDMX",
@@ -74,7 +74,7 @@
       "prompt": "Quiero Electricidad",
       "fecha": "2023-05-05",
       "hora": "15:30",
-      "geolocalizacion": true,
+      "geolocalizacion": "true",
       "ubicacionActual": {
         "ciudad": "Ciudad de México",
         "estado": "CDMX",
@@ -119,7 +119,7 @@
       "prompt": "Quiero Arreglar bombillo",
       "fecha": "2023-05-05",
       "hora": "15:30",
-      "geolocalizacion": true,
+      "geolocalizacion": "true",
       "ubicacionActual": {
         "ciudad": "Ciudad de México",
         "estado": "CDMX",
@@ -164,7 +164,7 @@
       "prompt": "Si",
       "fecha": "2023-05-05",
       "hora": "15:30",
-      "geolocalizacion": true,
+      "geolocalizacion": "true",
       "ubicacionActual": {
         "ciudad": "Ciudad de México",
         "estado": "CDMX",
