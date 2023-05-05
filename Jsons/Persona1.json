@@ -35,7 +35,7 @@
         }
       ],
       "Respuesta": "Los serviocios que encontramos fueron Electricidad Express y Limpieza Total ,Cual de ellos necesitas?",
-      "estado": "Negado"
+      "status": "Negado"
   },    
   {
     "idCoversacion":"1",
@@ -61,7 +61,7 @@
         }
     ],
     "Respuesta": "Quieres Pagar el servicio de Electricidad Express?",
-    "estado": "Negado"
+    "status": "Negado"
 },
 {
   "idCoversacion":"1",
@@ -87,7 +87,7 @@
       }
   ],
   "Respuesta": "Se ha realizado el Pago correctamente",
-  "estado": "Exitoso"
+  "status": "Exitoso"
 
 }
 
@@ -96,20 +96,5 @@
   
   
 ] 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   
