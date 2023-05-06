@@ -1,6 +1,4 @@
-{
-  "idUser": "1",
-  "conversaciones": [
+ [
     {
       "idCoversacion": "1",
       "prompt": "Busco servicios de electricidad o limpieza",
@@ -205,4 +203,3 @@
       "monto": "50$"
     }
   ]
-}
