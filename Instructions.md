@@ -70,13 +70,14 @@ las aplicaciones, interfaces de análisis de AI, apis, y demás que permiten que
 + todos los scripts, archivos de comandos y datos que sean necesarios para este ejercicio
 + fecha y hora del último commit : domingo 23 de abril, media noche
 
-## preliminar #2, real time notifications, async update for content and sales, TBD , 60pts
-+ cuando un proveedor de servicio quiere actualizar su contenido de la página principal debe hacerlo por medio de un api
-+ dado que esto es tan masivo, no se realiza la actualización en el cluster en tiempo real si no que se hace de forma asíncrona
-+ el request del proveedor al api en lugar de ser salvado es enviado a un servidor de notificaciones persistente, en este caso se ha decidido que sea kafka
-+ una vez que kafka recibe la notificación se dispara un consumidor que se encarga de actualizar basado en el request la información necesaria en el cluster de mongo
-+ el otro proceso automático que debe existir se va a implementar en logstash, este se va encargar de cada cierto tiempo analizar los request de los usuarios y posteriormente indexar en un elastic search la información necesaria para poder mostrarle reportes por rangos de fecha a los provedores, de la cantidad y tipo de request que han estado procesando por ellos de forma exitosa, el monto de ventas que le han generado cada una; y también, la cantidad y tipo de request que los usuarios están buscando, que se acerca a hacer match con ellos pero que ellos no lo proveen y así crear oportunidades de negocio
-d+ icho reporte anterior deberá generarse por proveedor y por rango de fechas utilizando Kibana
-+ diseñe una arquitectura solución y obtenga aprobación de dicha arquitectura con el profesor para los objetivos de este preliminar
-+ una vez con la arquitectura aprobada proceda a realizar la implementación necesaria
-+ la revisión será demostrativa en las herramientas solicitadas y con la arquitectura diseñada por el grupo, será con cita de revisión con el profesor
+## preliminar #2, real time notifications, async update for content and sales, sábado 13 de mayo, 60pts
+- cuando un proveedor de servicio quiere actualizar su contenido de la página principal debe hacerlo por medio de un api 
+- dado que esto es tan masivo, no se realiza la actualización en el cluster en tiempo real si no que se hace de forma asíncrona
+- el request del proveedor al api en lugar de ser salvado es enviado a un servidor de notificaciones persistente, en este caso se ha decidido que sea kafka 
+- una vez que kafka recibe la notificación se dispara un consumidor que se encarga de actualizar basado en el request la información necesaria en el cluster de mongo 
+- el otro proceso automático que debe existir se va a implementar en logstash, este se va encargar de cada cierto tiempo analizar los request de los usuarios y posteriormente indexar en un elastic search la información necesaria para poder mostrarle reportes por rangos de fecha a los provedores, de la cantidad y tipo de request que han estado procesando por ellos de forma exitosa, el monto de ventas que le han generado cada una; y también, la cantidad y tipo de request que los usuarios están buscando, que se acerca a hacer match con ellos pero que ellos no lo proveen y así crear oportunidades de negocio
+- dicho reporte anterior deberá generarse por proveedor y por rango de fechas utilizando Kibana 
+- diseñe una arquitectura solución y obtenga aprobación de dicha arquitectura con el profesor para los objetivos de este preliminar
+- una vez con la arquitectura aprobada proceda a realizar la implementación necesaria
+- con respecto a las transacciones consistentes, estás podrían estar ocasionando problemas de: dirty read, phantom, lost update y deadlock. estudie los pasos de las transacciones de request y pago del sistema, y encuentre junto con el profesor cuáles son esos posibles casos. Implemente los stored procedures y simule dichas situaciones por medio de llamadas a los SP transaccionales para que así su equipo de trabajo analice posibles soluciones a nivel de diseño o SQL. 
+- la revisión será demostrativa en las herramientas solicitadas y con la arquitectura diseñada por el grupo, será con cita de revisión con el profesor 
