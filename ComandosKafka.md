@@ -13,4 +13,5 @@ kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-topic --f
 npm install kafka-node
 npm install kafkajs
 npm install express
+npm install mongodb
 ```
