@@ -31,6 +31,7 @@
              "precio": "100$"
            }
          ],
+         "extras":[],
          "logo": "https://ejemplo.com/logo-electricidad-express.jpg",
          "categoria": "servicios",
          "puntuacion": "4.5",
