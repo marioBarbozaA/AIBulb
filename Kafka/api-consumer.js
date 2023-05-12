@@ -1,52 +1,53 @@
-const express = require('express');
-const { Kafka } = require('kafkajs');
+const { MongoClient } = require('mongodb');
+const { Kafka, logLevel } = require("kafkajs")
+
+const clientId = "my-app"
+const brokers = ["localhost:9092"]
+const topic = "my-topic"
 
 const kafka = new Kafka({
-  clientId: 'my-app',
-  brokers: ['localhost:9092'],
-  // Add session timeout configuration
-  consumer: {
-    sessionTimeout: 30000,
-  },
-});
+	clientId,
+	brokers,
+	// logCreator: customLogger,
+	//logLevel: logLevel.DEBUG,
+})
 
-const app = express();
+// the kafka instance and configuration variables are the same as before
 
-function delay(time) {
-    return new Promise(resolve => setTimeout(resolve, time));
+// create a new consumer from the kafka client, and set its group ID
+// the group ID helps Kafka keep track of the messages that this client
+// is yet to receive
+const consumer = kafka.consumer({
+	groupId: clientId,
+	// wait for at most 3 seconds before receiving new data
+	maxWaitTimeInMs: 3000,
+})
+
+const mongoUri = 'mongodb://mongo:27017';
+const dbName = 'disponibles';
+const collectionName = 'servicios';
+
+const consume = async () => {
+	// first, we wait for the client to connect and subscribe to the given topic
+	await consumer.connect()
+	await consumer.subscribe({ topic, fromBeginning: true })
+	await consumer.run({
+		// this function is called every time the consumer gets a new message
+		eachMessage: ({ message }) => {
+			const value = message.value.toString();
+      console.log(`Received message: ${value}`);
+      try {
+        //const client =  MongoClient.connect(mongoUri);
+        //const collection = client.db(dbName).collection(collectionName);
+        //const document = JSON.parse(value);
+        //collection.insertOne(document);
+        console.log(`Message ${message.offset} ${message.value} stored in MongoDB`);
+      } catch (err) {
+        console.error(`Error storing message ${message.offset} in MongoDB: ${err.message}`);
+      }
+		},
+	})
 }
-
-app.get('/messages', async (req, res) => {
-  try {
-    const consumer = kafka.consumer({ groupId: 'my-group' });
-    await consumer.connect();
-    await consumer.subscribe({ topic: 'my-topic', fromBeginning: true });
-
-    const messages = [];
-
-    await consumer.run({
-        eachMessage
-        : async ({ topic, partition, message }) => {
-          console.log({
-            partition,
-            offset: message.offset,
-            value: message.value.toString(),
-          })
-        },
-      })
-
-      //await delay(5000);
-
-
-    await consumer.disconnect();
-
-    res.json(messages);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Internal Server Error' });
-  }
-});
-
-app.listen(3010, () => {
-  console.log('Server listening on port 3010');
-});
+consume().catch((err) => {
+	console.error("error in consumer: ", err)
+})
