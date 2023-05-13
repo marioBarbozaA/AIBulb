@@ -13,8 +13,8 @@ rs.initiate(
     _id: "configrs",
     configsvr: true,
     members: [
-      { _id : 0, host : "25.3.189.113:27119" },
-      { _id : 1, host : "25.3.189.113:27120" }
+      { _id : 0, host : "25.3.224.0:27119" },
+      { _id : 1, host : "25.3.224.0:27120" }
     ]
   }
 );
