@@ -1,5 +1,26 @@
 version: '3'
 services:
+  ## Config Servers
+  Config_1:
+    image: mongo
+    container_name: Config_1
+    command: mongod --port 27017  --configsvr --replSet "configrs" --dbpath /data/configdb --bind_ip_all # Falta Network
+    ports:
+      - 27119:27017
+    networks:
+      OurNetwork:
+        ipv4_address: 10.0.0.2
+
+  Config_2:
+    image: mongo
+    container_name: Config_2
+    command: mongod --port 27017  --configsvr --replSet "configrs" --dbpath /data/configdb --bind_ip_all
+    ports:
+      - 27120:27017
+    networks:
+      OurNetwork:
+        ipv4_address: 10.0.0.3
+
   CR_Sur:
     image: mongo
     container_name: CR_Sur #shard-02-node-a
