@@ -23,7 +23,7 @@ const consumer = kafka.consumer({
 	maxWaitTimeInMs: 3000,
 })
 
-const mongoUri = 'mongodb://mongo:27017';
+const mongoUri = 'mongodb://25.3.224.0:27017';
 const dbName = 'disponibles';
 const collectionName = 'servicios';
 
@@ -34,14 +34,25 @@ const consume = async () => {
 	await consumer.run({
 		// this function is called every time the consumer gets a new message
 		eachMessage: ({ message }) => {
-			const value = message.value.toString();
-      console.log(`Received message: ${value}`);
+			const valueID = message.key;
+			const valueMessage = message.value.toString();
+      console.log(`Received message: ${valueID, valueMessage}`);
       try {
-        //const client =  MongoClient.connect(mongoUri);
-        //const collection = client.db(dbName).collection(collectionName);
-        //const document = JSON.parse(value);
-        //collection.insertOne(document);
-        console.log(`Message ${message.offset} ${message.value} stored in MongoDB`);
+        const client = new MongoClient(mongoUri, {
+			useNewUrlParser: true,
+			useUnifiedTopology: true,
+		  });
+        const collection = client.db(dbName).collection(collectionName);
+        const document = JSON.parse(valueMessage);
+		console.log(document);
+		try {
+			collection.insertOne(document);
+			
+		} catch (error) {
+			console.log(`Error al insertar ${error} `);
+		}
+       // console.log(`Message ${message.offset} ${message.value} stored in MongoDB`);
+		//console.log(`Message with key ${valueID} and value ${valueMessage} stored in MongoDB`);
       } catch (err) {
         console.error(`Error storing message ${message.offset} in MongoDB: ${err.message}`);
       }
