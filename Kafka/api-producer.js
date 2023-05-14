@@ -10,7 +10,6 @@ const kafka = new Kafka({
 app.use(express.json());
 
 app.post('/messages', async (req, res) => {
-  const { id } = req.body;
   const { message } = req.body;
 
   const producer = kafka.producer();
@@ -18,7 +17,7 @@ app.post('/messages', async (req, res) => {
 
   await producer.send({
     topic: 'my-topic',
-    messages: [{ key: id, value: message }],
+    messages: [{ value: message }],
   });
 
   await producer.disconnect();

@@ -26,7 +26,6 @@ const consume = async () => {
 	await consumer.subscribe({ topic, fromBeginning: true })
 	await consumer.run({
 		eachMessage: async ({ message }) => {
-			const valueID = message.key;
 			const valueMessage = message.value.toString();
       console.log(`Received message: ${valueID, valueMessage}`);
       try {
@@ -43,7 +42,7 @@ const consume = async () => {
 		);
         //collection.insertOne(document); // Para insertar servicios
 
-		console.log(`Message with key ${valueID} and value ${valueMessage} updated in MongoDB`);
+		console.log(`Message with value ${valueMessage} updated in MongoDB`);
       } catch (err) {
         console.error(`Error storing message ${message.offset} in MongoDB: ${err.message}`);
       }
