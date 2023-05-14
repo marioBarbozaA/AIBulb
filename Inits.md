@@ -50,7 +50,7 @@ sh.addShard( "Stephanie/25.3.188.46:27127")
 sh.addShardTag("Camilo", "Guatemala");
 sh.addShardTag("CompuMario", "Costa Rica");
 sh.addShardTag("Raulis", "Mexico");
-sh.addShardTag("Stephanie", "Estado Unidos");
+sh.addShardTag("Stephanie", "Estados Unidos");
 
 ```
 #### addTagRange
@@ -58,33 +58,57 @@ sh.addShardTag("Stephanie", "Estado Unidos");
 
 ```python
 #Se hace seguido del addSharTag
-sh.addTagRange( "disponibles.servicios",
+sh.addTagRange( "disponibles.request",
                 { pais: "Guatemala"},
                 { pais: "Guatemala1"},
                 "Guatemala"
               );
 
-sh.addTagRange( "disponibles.servicios",
+sh.addTagRange( "disponibles.request",
                 { pais: "Costa Rica"},
                 { pais: "Costa Rica1"},
                 "Costa Rica"
               );
 
-sh.addTagRange( "disponibles.servicios",
+sh.addTagRange( "disponibles.request",
                 { pais: "Mexico"},
                 { pais: "Mexico1"},
                 "Mexico"
               );
 
-sh.addTagRange( "disponibles.servicios",
-                { pais: "Estado Unidos"},
-                { pais: "Estado Unidos1"},
-                "Estado Unidos"
+sh.addTagRange( "disponibles.request",
+                { pais: "Estados Unidos"},
+                { pais: "Estados Unidos1"},
+                "Estados Unidos"
+              );
+sh.addTagRange( "disponibles.proveedores",
+                { pais: "Guatemala"},
+                { pais: "Guatemala1"},
+                "Guatemala"
+              );
+
+sh.addTagRange( "disponibles.proveedores",
+                { pais: "Costa Rica"},
+                { pais: "Costa Rica1"},
+                "Costa Rica"
+              );
+
+sh.addTagRange( "disponibles.proveedores",
+                { pais: "Mexico"},
+                { pais: "Mexico1"},
+                "Mexico"
+              );
+
+sh.addTagRange( "disponibles.proveedores",
+                { pais: "Estados Unidos"},
+                { pais: "Estados Unidos1"},
+                "Estados Unidos"
               );
 # Se hace seguido del addTagRange              
 sh.enableSharding("disponibles");
 # Se hace seguido del enableSharding
-sh.shardCollection("disponibles.servicios", { pais : 1 } );
+sh.shardCollection("disponibles.request", { pais : 1 } );
+sh.shardCollection("disponibles.proveedores", { pais : 1 } );
 # Se hace seguido del shardCollection
 db.adminCommand({
   "setDefaultRWConcern" : 1,
