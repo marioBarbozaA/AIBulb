@@ -1,22 +1,16 @@
 const { MongoClient } = require('mongodb');
 const { Kafka, logLevel } = require("kafkajs")
 
-const clientId = "my-app"
+const clientId = "provider"
 const brokers = ["localhost:9092"]
-const topic = "my-topic"
+const topic = "provider-update-info"
 
 const kafka = new Kafka({
 	clientId,
 	brokers,
-	// logCreator: customLogger,
-	//logLevel: logLevel.DEBUG,
 })
 
-// the kafka instance and configuration variables are the same as before
 
-// create a new consumer from the kafka client, and set its group ID
-// the group ID helps Kafka keep track of the messages that this client
-// is yet to receive
 const consumer = kafka.consumer({
 	groupId: clientId,
 	// wait for at most 3 seconds before receiving new data
@@ -25,15 +19,13 @@ const consumer = kafka.consumer({
 
 const mongoUri = 'mongodb://25.3.224.0:27017';
 const dbName = 'disponibles';
-const collectionName = 'servicios';
+const collectionName = 'proveedores';
 
 const consume = async () => {
-	// first, we wait for the client to connect and subscribe to the given topic
 	await consumer.connect()
 	await consumer.subscribe({ topic, fromBeginning: true })
 	await consumer.run({
-		// this function is called every time the consumer gets a new message
-		eachMessage: ({ message }) => {
+		eachMessage: async ({ message }) => {
 			const valueID = message.key;
 			const valueMessage = message.value.toString();
       console.log(`Received message: ${valueID, valueMessage}`);
@@ -45,14 +37,13 @@ const consume = async () => {
         const collection = client.db(dbName).collection(collectionName);
         const document = JSON.parse(valueMessage);
 		console.log(document);
-		try {
-			collection.insertOne(document);
-			
-		} catch (error) {
-			console.log(`Error al insertar ${error} `);
-		}
-       // console.log(`Message ${message.offset} ${message.value} stored in MongoDB`);
-		//console.log(`Message with key ${valueID} and value ${valueMessage} stored in MongoDB`);
+		await collection.updateOne(
+			{ _id: document._id, pais: document.pais }, // Proveedor que vamos a actualizar
+			{ $set: document }, // the update operation to apply
+		);
+        //collection.insertOne(document); // Para insertar servicios
+
+		console.log(`Message with key ${valueID} and value ${valueMessage} updated in MongoDB`);
       } catch (err) {
         console.error(`Error storing message ${message.offset} in MongoDB: ${err.message}`);
       }
