@@ -1,0 +1,37 @@
+{
+  "_id": 1,
+  "nombreProveedor": "Netflix",
+  "descripcion": "Streaming platform for movies and TV shows",
+  "logo": "logo.png",
+  "pais": "Estados Unidos",
+  "infoContacto": ["25555555", "netflix@email.com"],
+  "activo": true,
+  "servicios": [
+    {
+      "idServicio": 1,
+      "nombreServicio": "Streaming",
+      "global": true,
+      "paises": [
+        {
+          "nombrePais": "Costa Rica",
+          "codigoPais": "CR",
+          "moneda": "USD",
+          "costo": 200,
+          "modeloPago": "Subscripcion"
+        }
+      ],
+      "leyes": [
+        {
+          "idLey": 1,
+          "textoLey": "Impuesto IVA",
+          "pais": "Costa Rica",
+          "fechaInicio": "2023-01-01",
+          "fechaFin": "2023-12-31",
+          "activo": true,
+          "costo": 200000,
+          "moneda": "COLONES"
+        }
+      ]
+    }
+  ]
+}
