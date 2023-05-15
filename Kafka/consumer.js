@@ -27,7 +27,7 @@ const consume = async () => {
 	await consumer.run({
 		eachMessage: async ({ message }) => {
 			const valueMessage = message.value.toString();
-      console.log(`Received message: ${valueID, valueMessage}`);
+      console.log(`Received message: ${valueMessage}`);
       try {
         const client = new MongoClient(mongoUri, {
 			useNewUrlParser: true,
