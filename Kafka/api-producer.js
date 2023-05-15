@@ -16,7 +16,7 @@ app.post('/messages', async (req, res) => {
   await producer.connect();
 
   await producer.send({
-    topic: 'my-topic',
+    topic: 'provider-update-info',
     messages: [{ value: message }],
   });
 
