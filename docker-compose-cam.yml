@@ -1,26 +1,7 @@
 version: '3'
 services:
   
-  ## Config Servers
-  Config_1:
-    image: mongo
-    container_name: Config_1
-    command: mongod --port 27017  --configsvr --replSet "configrs" --dbpath /data/configdb --bind_ip_all # Falta Network
-    ports:
-      - 27119:27017
-    networks:
-      OurNetwork:
-        ipv4_address: 10.0.0.2
-
-  Config_2:
-    image: mongo
-    container_name: Config_2
-    command: mongod --port 27017  --configsvr --replSet "configrs" --dbpath /data/configdb --bind_ip_all
-    ports:
-      - 27120:27017
-    networks:
-      OurNetwork:
-        ipv4_address: 10.0.0.3
+  
     
   ## Shard Servers
   Gm_Sur:
@@ -52,31 +33,7 @@ services:
       OurNetwork:
         ipv4_address: 10.0.0.17    
 
-  ## Router
-  Router_1:
-    image: mongo
-    container_name: Router_1
-    command: mongos --port 27017 --configdb configrs/Config_1:27017,Config_2:27017 --bind_ip_all
-    ports:
-      - 27017:27017
-    networks:
-      OurNetwork:
-        ipv4_address: 10.0.0.4
-    depends_on:
-      - Config_1
-      - Config_2
-  Router_2:
-    image: mongo
-    container_name: Router_2
-    command: mongos --port 27017 --configdb configrs/Config_1:27017,Config_2:27017 --bind_ip_all
-    ports:
-      - 27018:27017
-    networks:
-      OurNetwork:
-        ipv4_address: 10.0.0.5
-    depends_on:
-      - Config_1
-      - Config_2
+
       
   Gm_Arb:
     image: mongo
