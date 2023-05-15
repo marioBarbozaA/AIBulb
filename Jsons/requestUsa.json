@@ -1,20 +1,880 @@
 [
-    {"pais":"Estados Unidos","userId": "301","idConversacion": "1","prompt": "Busco servicios de electricidad o limpieza","hora": "15:30","fecha": "2023-05-05","geolocalizacion": "true","ubicacionActual": {    "ciudad": "Ciudad de USA",    "estado": "USA",    "pais": "USA",    "coordenadas": {        "latitud": "19.4326",        "longitud": "-99.1332"    }},"serviciosEncontrados": [    {        "nombre": "Electricidad Express",        "ofrece": [            {                "servicio": "Arreglar Bombillo",                "precio": "50$"            },            {                "servicio": "Arreglar Cableado",                "precio": "100$"            },            {                "servicio": "Arreglar Enchufe",                "precio": "100$"            }        ],        "extras": [],        "logo": "https://ejemplo.com/logo-electricidad-express.jpg",        "categoria": "servicios",        "puntuacion": "4.5",        "direccion": "Calle 10 #25, Colonia Del Valle",        "telefono": "55 1234 5678",        "horario": "Lunes a Viernes 8:00 a 18:00"    },    {        "nombre": "Limpieza Total",        "ofrece": [            {                "servicio": "Barrer",                "precio": "50$"            },            {                "servicio": "Lavar",                "precio": "100$"            },            {                "servicio": "Aspirar",                "precio": "100$"            }        ],        "extras": [],        "logo": "https://ejemplo.com/logo-limpieza-total.jpg",        "categoria": "housekeeping",        "puntuacion": "3.9",        "direccion": "Av. Insurgentes #120, Colonia Roma",        "telefono": "55 2345 6789",        "horario": "Todos los días 9:00 a 21:00"    }],"tipoRequest": "Mantenimiento","tipoServicio": "On demand","Respuesta": "Los servicios que encontramos fueron Electricidad Express y Limpieza Total ,Cual de ellos necesitas?","status": "Negado","monto": "0$"},
-    {"pais":"Estados Unidos","userId": "301","idConversacion": "1","prompt": "Quiero Electricidad","fecha": "2023-05-05","hora": "15:30","geolocalizacion": "true","ubicacionActual": {    "ciudad": "Ciudad de USA",    "estado": "USA",    "pais": "USA",    "coordenadas": {        "latitud": "19.4326",        "longitud": "-99.1332"    }},"serviciosEncontrados": [    {        "nombre": "Electricidad Express",        "ofrece": [            {                "servicio": "Arreglar Bombillo",                "precio": "50$"            },            {                "servicio": "Arreglar Cableado",                "precio": "100$"            },            {                "servicio": "Arreglar Enchufe",                "precio": "100$"            }        ],        "extras": [],        "logo": "https://ejemplo.com/logo-electricidad-express.jpg",        "categoria": "servicios",        "puntuacion": "4.5",        "direccion": "Calle 10 #25, Colonia Del Valle",        "telefono": "55 1234 5678",        "horario": "Lunes a Viernes 8:00 a 18:00"    }],"tipoRequest": "Mantenimiento","tipoServicio": "On demand","Respuesta": "Que servicios deseas?","status": "Negado","monto": "0$"},
-    {"pais":"Estados Unidos","userId": "301","idConversacion": "1","prompt": "Quiero Arreglar bombillo","fecha": "2023-05-05","hora": "15:30","geolocalizacion": "true","ubicacionActual": {    "ciudad": "Ciudad de USA",    "estado": "USA",    "pais": "USA",    "coordenadas": {        "latitud": "19.4326",        "longitud": "-99.1332"    }},"serviciosEncontrados": [    {        "nombre": "Electricidad Express",        "ofrece": [            {                "servicio": "Arreglar Bombillo",                "precio": "50$"            },            {                "servicio": "Arreglar Cableado",                "precio": "100$"            },            {                "servicio": "Arreglar Enchufe",                "precio": "100$"            }        ],        "extras": [],        "logo": "https://ejemplo.com/logo-electricidad-express.jpg",        "categoria": "servicios",        "puntuacion": "4.5",        "direccion": "Calle 10 #25, Colonia Del Valle",        "telefono": "55 1234 5678",        "horario": "Lunes a Viernes 8:00 a 18:00"    }],"tipoRequest": "Mantenimiento","tipoServicio": "On demand","Respuesta": "El servicio de Arreglar Bombillo tiene un costo de 50$ ,Deseas solicitarlo?","status": "Negado","monto": "0$"},
-    {"pais":"Estados Unidos","userId": "301","idConversacion": "1","prompt": "Si","fecha": "2023-05-05","hora": "15:30","geolocalizacion": "true","ubicacionActual": {    "ciudad": "Ciudad de USA",    "estado": "USA",    "pais": "USA",    "coordenadas": {        "latitud": "19.4326",        "longitud": "-99.1332"    }},"serviciosEncontrados": [    {        "nombre": "Electricidad Express",        "ofrece": [            {                "servicio": "Arreglar Bombillo",                "precio": "50$"            },            {                "servicio": "Arreglar Cableado",                "precio": "100$"            },            {                "servicio": "Arreglar Enchufe",                "precio": "100$"            }        ],        "extras": [],        "logo": "https://ejemplo.com/logo-electricidad-express.jpg",        "categoria": "servicios",        "puntuacion": "4.5",        "direccion": "Calle 10 #25, Colonia Del Valle",        "telefono": "55 1234 5678",        "horario": "Lunes a Viernes 8:00 a 18:00"    }],"tipoRequest": "Mantenimiento","tipoServicio": "On demand","Respuesta": "Se ha realizado la transaccion con exito?","status": "Exitoso","monto": "50$"},
-    {"pais":"Estados Unidos","userId": "302","idConversacion": "2","prompt": "Quiero un taco de birria","fecha": "2023-05-05","hora": "15:30","geolocalizacion": "true","ubicacionActual": {    "ciudad": "Ciudad de USA",    "estado": "USA",    "pais": "USA",    "coordenadas": {        "latitud": "19.4326",        "longitud": "-99.1332"    }},"serviciosEncontrados": [    {        "nombre": "Uber eats",        "ofrece": [            {                "servicio": "Tacontento",                "precio": "0$"            },            {                "servicio": "Taquiche",                "precio": "0$"            },            {                "servicio": "mr taco",                "precio": "0$"            },            {                "servicio": "Comida Típica",                "precio": "0$"            }        ],        "extras": [],        "logo": "https://ejemplo.com/logo-uber-eats.jpg",        "categoria": "restaurantes",        "puntuacion": "4.2",        "direccion": "Mex, USA",        "telefono": "+506 2222 3333",        "horario": "Lunes a Domingo 7:00 a 22:00"    }],"tipoRequest": "Comida","tipoServicio": "On demand","Respuesta": "lugares con tacos en uber eats,como tacontento,taquiche,mr taco,comida típica, cual deseas?","status": "Negado","monto": "0$"},
-    {"pais":"Estados Unidos","userId": "302","idConversacion": "2","prompt": "Quiero la opción más barata","fecha": "2023-05-05","hora": "15:30","geolocalizacion": "true","ubicacionActual": {    "ciudad": "Ciudad de USA",    "estado": "USA",    "pais": "USA",    "coordenadas": {        "latitud": "19.4326",        "longitud": "-99.1332"    }},"serviciosEncontrados": [    {        "nombre": "Uber eats",        "ofrece": [            {                "servicio": "Tacontento",                "precio": "10$"            }        ],        "extras": [],        "logo": "https://ejemplo.com/logo-uber-eats.jpg",        "categoria": "restaurantes",        "puntuacion": "4.2",        "direccion": "Mex, USA",        "telefono": "+506 2222 3333",        "horario": "Lunes a Domingo 7:00 a 22:00"    }],"tipoRequest": "Comida","tipoServicio": "On demand","Respuesta": "se te han recargado 10$, paratacos de birria en tacontento, deseas solicitarlo?","status": "Negado","monto": "0$"},
-    {"pais":"Estados Unidos","userId": "302","idConversacion": "2","prompt": "Si","fecha": "2023-05-05","hora": "15:30","geolocalizacion": "true","ubicacionActual": {    "ciudad": "Ciudad de USA",    "estado": "USA",    "pais": "USA",    "coordenadas": {        "latitud": "19.4326",        "longitud": "-99.1332"    }},"serviciosEncontrados": [    {        "nombre": "Uber eats",        "ofrece": [            {                "servicio": "Tacontento",                "precio": "10$"            }        ],        "extras": [],        "logo": "https://ejemplo.com/logo-uber-eats.jpg",        "categoria": "restaurantes",        "puntuacion": "4.2",        "direccion": "Mex, USA",        "telefono": "+506 2222 3333",        "horario": "Lunes a Domingo 7:00 a 22:00"    }],"tipoRequest": "Comida","tipoServicio": "On demand","Respuesta": "?Transaccion exitosa, se ha realizado el pago de 10$","status": "Exitoso","monto": "0$"},
-    {"pais":"Estados Unidos","userId": "303","idConversacion": "3","prompt": "deseo suscribirme a netflix","fecha": "2023-05-05","hora": "15:30","geolocalizacion": "true","ubicacionActual": {    "ciudad": "Ciudad de USA",    "estado": "USA",    "pais": "USA",    "coordenadas": {        "latitud": "19.4326",        "longitud": "-99.1332"    }},"serviciosEncontrados": [    {        "nombre": "Netflix",        "ofrece": [            {                "servicio": "peliculas",                "precio": "15$"            }        ],        "extras": [],        "logo": "https://ejemplo.com/logo-netflix.jpg",        "categoria": "Entretenimiento",        "puntuacion": "4.8",        "direccion": "Calle 5, Barrio USA",        "telefono": "+506 2222 9999",        "horario": "24/7"    }],"tipoRequest": "Entretenimiento","tipoServicio": "Suscripcion","tieneSuscripcion": "false","Respuesta": "quieres pagar 15 dolares para suscribirte?","status": "Negado","monto": "0$"},
-    {"pais":"Estados Unidos","userId": "303","idConversacion": "3","prompt": "Si","fecha": "2023-05-05","hora": "15:30","geolocalizacion": "true","ubicacionActual": {    "ciudad": "Ciudad de USA",    "estado": "USA",    "pais": "USA",    "coordenadas": {        "latitud": "19.4326",        "longitud": "-99.1332"    }},"serviciosEncontrados": [    {        "nombre": "Netflix",        "ofrece": [            {                "servicio": "peliculas",                "precio": "15$"            }        ],        "extras": [],        "logo": "https://ejemplo.com/logo-netflix.jpg",        "categoria": "Entretenimiento",        "puntuacion": "4.8",        "direccion": "Calle 5, Barrio USA",        "telefono": "+506 2222 9999",        "horario": "24/7"    }],"tipoRequest": "Entretenimiento","tipoServicio": "Suscripcion","tieneSuscripcion": "false","Respuesta": "Transaccion exitosa","status": "Exitoso","monto": "15$"},
-    {"pais":"Estados Unidos","userId": "304","idConversacion": "4","prompt": "Me siento solo y quiero hablar con alguien","fecha": "2023-05-05","hora": "15:30","geolocalizacion": "true","ubicacionActual": {    "ciudad": "Ciudad de USA",    "estado": "USA",    "pais": "USA",    "coordenadas": {        "latitud": "19.4326",        "longitud": "-99.1332"    }},"serviciosEncontrados": [    {        "nombre": "Cariñosas al rescate",        "ofrece": [            {                "servicio": "llamadas",                "precio": "10$"            },            {                "servicio": "video llamadas",                "precio": "20$"            },            {                "servicio": "visita a domicilio",                "precio": "100$"            }        ],        "extras": [],        "logo": "https://ejemplo.com/logo-Cariñosas.jpg",        "categoria": "Entretenimiento",        "puntuacion": "4.8",        "direccion": "Calle 5, Barrio USA",        "telefono": "+506 2222 9999",        "horario": "24/7"    }],"tipoRequest": "Entretenimiento","tipoServicio": "On demand","Respuesta": "quieres pagar 10 dolares para hablar con una cariñosa?","status": "Negado","monto": "0$"},
-    {"pais":"Estados Unidos","userId": "304","idConversacion": "4","prompt": "Si lo necesito","fecha": "2023-05-05","hora": "15:30","geolocalizacion": "true","ubicacionActual": {    "ciudad": "Ciudad de USA",    "estado": "USA",    "pais": "USA",    "coordenadas": {        "latitud": "19.4326",        "longitud": "-99.1332"    }},"serviciosEncontrados": [    {        "nombre": "Cariñosas al rescate",        "ofrece": [            {                "servicio": "llamadas",                "precio": "10$"            },            {                "servicio": "video llamadas",                "precio": "20$"            },            {                "servicio": "visita a domicilio",                "precio": "100$"            }        ],        "extras": [],        "logo": "https://ejemplo.com/logo-Cariñosas.jpg",        "categoria": "Entretenimiento",        "puntuacion": "4.8",        "direccion": "Calle 5, Barrio USA",        "telefono": "+506 2222 9999",        "horario": "24/7"    }],"tipoRequest": "Entretenimiento","tipoServicio": "On demand","Respuesta": "Transaccion exitosa, espera la llamada de la cariñosa","status": "Exitoso","monto": "10$"},
-    {"pais":"Estados Unidos","userId": "305","idConversacion": "5","prompt": "Pon canciones de Nodal","fecha": "2023-05-05","hora": "15:30","geolocalizacion": "true","ubicacionActual": {    "ciudad": "Ciudad de USA",    "estado": "USA",    "pais": "USA",    "coordenadas": {        "latitud": "19.4326",        "longitud": "-99.1332"    }},"serviciosEncontrados": [    {        "nombre": "Spotify",        "ofrece": [            {                "servicio": "Aqui Abajo",                "precio": "0$"            },            {                "servicio": "Botella tras botella",                "precio": "0$"            },            {                "servicio": "De los besos que te di",                "precio": "0$"            }        ],        "extras": [],        "logo": "https://ejemplo.com/logo-spotify.jpg",        "categoria": "musica",        "puntuacion": "4.8",        "direccion": "Calle 5, Barrio San José",        "telefono": "+506 8888 8888",        "horario": "24/7"    }],"tipoRequest": "Entretenimiento","tipoServicio": "Suscripcion","tieneSuscripcion": "true","Respuesta": "Reproduciendo Aqui abajo","status": "Exitoso","monto": "0$"},
-    {"pais":"Estados Unidos","userId": "306","idConversacion": "6","prompt": "Quiero un taco al pastor","fecha": "2023-05-05","hora": "15:30","geolocalizacion": "true","ubicacionActual": {    "ciudad": "Ciudad de USA",    "estado": "USA",    "pais": "USA",    "coordenadas": {        "latitud": "19.4326",        "longitud": "-99.1332"    }},"serviciosEncontrados": [    {        "nombre": "Uber eats",        "ofrece": [            {                "servicio": "Tacontento",                "precio": "0$"            },            {                "servicio": "Taquiche",                "precio": "0$"            },            {                "servicio": "mr taco",                "precio": "0$"            },            {                "servicio": "Comida Típica",                "precio": "0$"            }        ],        "extras": [],        "logo": "https://ejemplo.com/logo-uber-eats.jpg",        "categoria": "restaurantes",        "puntuacion": "4.2",        "direccion": "Mex, USA",        "telefono": "+506 2222 3333",        "horario": "Lunes a Domingo 7:00 a 22:00"    }],"tipoRequest": "Comida","tipoServicio": "On demand","Respuesta": "lugares con tacos en uber eats,como tacontento,taquiche,mr taco,comida típica, cual deseas?","status": "Negado","monto": "0$"},
-    {"pais":"Estados Unidos","userId": "306","idConversacion": "6","prompt": "Quiero la opción más barata","fecha": "2023-05-05","hora": "15:30","geolocalizacion": "true","ubicacionActual": {    "ciudad": "Ciudad de USA",    "estado": "USA",    "pais": "USA",    "coordenadas": {        "latitud": "19.4326",        "longitud": "-99.1332"    }},"serviciosEncontrados": [    {        "nombre": "Uber eats",        "ofrece": [            {                "servicio": "Tacontento",                "precio": "10$"            }        ],        "extras": [],        "logo": "https://ejemplo.com/logo-Tacontento.jpg",        "categoria": "restaurantes",        "puntuacion": "4.2",        "direccion": "Mex, USA",        "telefono": "+506 2222 3333",        "horario": "Lunes a Domingo 7:00 a 22:00"    }],"tipoRequest": "Comida","tipoServicio": "On demand","Respuesta": "se te han recargado 10$, para tacos al pastor en tacontento, deseas solicitarlo?","status": "Negado","monto": "0$"},
-    {"pais":"Estados Unidos","userId": "306","idConversacion": "6","prompt": "Si","fecha": "2023-05-05","hora": "15:30","geolocalizacion": "true","ubicacionActual": {    "ciudad": "Ciudad de USA",    "estado": "USA",    "pais": "USA",    "coordenadas": {        "latitud": "19.4326",        "longitud": "-99.1332"    }},"serviciosEncontrados": [    {        "nombre": "Uber eats",        "ofrece": [            {                "servicio": "Tacontento",                "precio": "10$"            }        ],        "extras": [],        "logo": "https://ejemplo.com/logo-Tacontento.jpg",        "categoria": "restaurantes",        "puntuacion": "4.2",        "direccion": "Mex, USA",        "telefono": "+506 2222 3333",        "horario": "Lunes a Domingo 7:00 a 22:00"    }],"tipoRequest": "Comida","tipoServicio": "On demand","Respuesta": "Transaccion exitosa","status": "Exitoso","monto": "10$"},
-    {"pais":"Estados Unidos","userId": "307","idConversacion": "7","prompt": "Pon shrek 2","fecha": "2023-05-05","hora": "15:30","geolocalizacion": "true","ubicacionActual": {    "ciudad": "Ciudad de USA",    "estado": "USA",    "pais": "USA",    "coordenadas": {        "latitud": "19.4326",        "longitud": "-99.1332"    }},"serviciosEncontrados": [    {        "nombre": "Netflix",        "ofrece": [            {                "servicio": "Shrek 2",                "precio": "0$"            }        ],        "extras": [],        "logo": "https://ejemplo.com/logo-spotify.jpg",        "categoria": "Entretenimiento",        "puntuacion": "4.8",        "direccion": "Calle 5, Barrio USA",        "telefono": "+506 8888 9999",        "horario": "24/7"    }],"tipoRequest": "Entretenimiento","tipoServicio": "Suscripcion","tieneSuscripcion": "true","Respuesta": "en seguida shrek 2","status": "Exitoso","monto": "0$"},
-    {"pais":"Estados Unidos","userId": "308","idConversacion": "8","prompt": "Quiero un uber","fecha": "2023-05-05","hora": "15:30","geolocalizacion": "true","ubicacionActual": {    "ciudad": "Ciudad de USA",    "estado": "USA",    "pais": "USA",    "coordenadas": {        "latitud": "19.4326",        "longitud": "-99.1332"    }},"serviciosEncontrados": [    {        "nombre": "Uber",        "ofrece": [            {                "servicio": "Uber X",                "precio": "10$"            },            {                "servicio": "Uber XL",                "precio": "15$"            },            {                "servicio": "Uber Black",                "precio": "20$"            }        ],        "extras": [],        "logo": "https://ejemplo.com/logo-uber.jpg",        "categoria": "Transporte",        "puntuacion": "4.2",        "direccion": "Mex, USA",        "telefono": "+506 2222 3333",        "horario": "24/7"    }],"tipoRequest": "Transporte","tipoServicio": "On demand","Respuesta": "Cual Uber deseas?","status": "Negado","monto": "0$"},
-    {"pais":"Estados Unidos","userId": "308","idConversacion": "8","prompt": "Quiero un uber XL a mi direccion actual","fecha": "2023-05-05","hora": "15:30","geolocalizacion": "true","ubicacionActual": {    "ciudad": "Ciudad de USA",    "estado": "USA",    "pais": "USA",    "coordenadas": {        "latitud": "19.4326",        "longitud": "-99.1332"    }},"serviciosEncontrados": [    {        "nombre": "Uber",        "ofrece": [            {                "servicio": "Uber X",                "precio": "10$"            },            {                "servicio": "Uber XL",                "precio": "15$"            },            {                "servicio": "Uber Black",                "precio": "20$"            }        ],        "extras": [],        "logo": "https://ejemplo.com/logo-uber.jpg",        "categoria": "Transporte",        "puntuacion": "4.2",        "direccion": "Mex, USA",        "telefono": "+506 2222 3333",        "horario": "24/7"    }],"tipoRequest": "Transporte","tipoServicio": "On demand","Respuesta": "Ya le llega su Uber XL","status": "Exitoso","monto": "0$"}
+    {
+        "pais": "Estados Unidos",
+        "userId": "301",
+        "idConversacion": "1",
+        "prompt": "Busco servicios de electricidad o limpieza",
+        "hora": "15:30",
+        "fecha": "2023-05-05",
+        "geolocalizacion": "true",
+        "ubicacionActual": {
+            "ciudad": "Ciudad de USA",
+            "estado": "USA",
+            "pais": "USA",
+            "coordenadas": {
+                "latitud": "19.4326",
+                "longitud": "-99.1332"
+            }
+        },
+        "serviciosEncontrados": [
+            {
+                "nombre": "Electricidad Express",
+                "ofrece": [
+                    {
+                        "servicio": "Arreglar Bombillo",
+                        "precio": "50"
+                    },
+                    {
+                        "servicio": "Arreglar Cableado",
+                        "precio": "100"
+                    },
+                    {
+                        "servicio": "Arreglar Enchufe",
+                        "precio": "100"
+                    }
+                ],
+                "extras": [],
+                "logo": "https://ejemplo.com/logo-electricidad-express.jpg",
+                "categoria": "servicios",
+                "puntuacion": "4.5",
+                "direccion": "Calle 10 #25, Colonia Del Valle",
+                "telefono": "55 1234 5678",
+                "horario": "Lunes a Viernes 8:00 a 18:00"
+            },
+            {
+                "nombre": "Limpieza Total",
+                "ofrece": [
+                    {
+                        "servicio": "Barrer",
+                        "precio": "50"
+                    },
+                    {
+                        "servicio": "Lavar",
+                        "precio": "100"
+                    },
+                    {
+                        "servicio": "Aspirar",
+                        "precio": "100"
+                    }
+                ],
+                "extras": [],
+                "logo": "https://ejemplo.com/logo-limpieza-total.jpg",
+                "categoria": "housekeeping",
+                "puntuacion": "3.9",
+                "direccion": "Av. Insurgentes #120, Colonia Roma",
+                "telefono": "55 2345 6789",
+                "horario": "Todos los días 9:00 a 21:00"
+            }
+        ],
+        "tipoRequest": "Mantenimiento",
+        "tipoServicio": "On demand",
+        "Respuesta": "Los servicios que encontramos fueron Electricidad Express y Limpieza Total ,Cual de ellos necesitas?",
+        "status": "Negado",
+        "monto": "0"
+    },
+    {
+        "pais": "Estados Unidos",
+        "userId": "301",
+        "idConversacion": "1",
+        "prompt": "Quiero Electricidad",
+        "fecha": "2023-05-05",
+        "hora": "15:30",
+        "geolocalizacion": "true",
+        "ubicacionActual": {
+            "ciudad": "Ciudad de USA",
+            "estado": "USA",
+            "pais": "USA",
+            "coordenadas": {
+                "latitud": "19.4326",
+                "longitud": "-99.1332"
+            }
+        },
+        "serviciosEncontrados": [
+            {
+                "nombre": "Electricidad Express",
+                "ofrece": [
+                    {
+                        "servicio": "Arreglar Bombillo",
+                        "precio": "50"
+                    },
+                    {
+                        "servicio": "Arreglar Cableado",
+                        "precio": "100"
+                    },
+                    {
+                        "servicio": "Arreglar Enchufe",
+                        "precio": "100"
+                    }
+                ],
+                "extras": [],
+                "logo": "https://ejemplo.com/logo-electricidad-express.jpg",
+                "categoria": "servicios",
+                "puntuacion": "4.5",
+                "direccion": "Calle 10 #25, Colonia Del Valle",
+                "telefono": "55 1234 5678",
+                "horario": "Lunes a Viernes 8:00 a 18:00"
+            }
+        ],
+        "tipoRequest": "Mantenimiento",
+        "tipoServicio": "On demand",
+        "Respuesta": "Que servicios deseas?",
+        "status": "Negado",
+        "monto": "0"
+    },
+    {
+        "pais": "Estados Unidos",
+        "userId": "301",
+        "idConversacion": "1",
+        "prompt": "Quiero Arreglar bombillo",
+        "fecha": "2023-05-05",
+        "hora": "15:30",
+        "geolocalizacion": "true",
+        "ubicacionActual": {
+            "ciudad": "Ciudad de USA",
+            "estado": "USA",
+            "pais": "USA",
+            "coordenadas": {
+                "latitud": "19.4326",
+                "longitud": "-99.1332"
+            }
+        },
+        "serviciosEncontrados": [
+            {
+                "nombre": "Electricidad Express",
+                "ofrece": [
+                    {
+                        "servicio": "Arreglar Bombillo",
+                        "precio": "50"
+                    },
+                    {
+                        "servicio": "Arreglar Cableado",
+                        "precio": "100"
+                    },
+                    {
+                        "servicio": "Arreglar Enchufe",
+                        "precio": "100"
+                    }
+                ],
+                "extras": [],
+                "logo": "https://ejemplo.com/logo-electricidad-express.jpg",
+                "categoria": "servicios",
+                "puntuacion": "4.5",
+                "direccion": "Calle 10 #25, Colonia Del Valle",
+                "telefono": "55 1234 5678",
+                "horario": "Lunes a Viernes 8:00 a 18:00"
+            }
+        ],
+        "tipoRequest": "Mantenimiento",
+        "tipoServicio": "On demand",
+        "Respuesta": "El servicio de Arreglar Bombillo tiene un costo de 50 ,Deseas solicitarlo?",
+        "status": "Negado",
+        "monto": "0"
+    },
+    {
+        "pais": "Estados Unidos",
+        "userId": "301",
+        "idConversacion": "1",
+        "prompt": "Si",
+        "fecha": "2023-05-05",
+        "hora": "15:30",
+        "geolocalizacion": "true",
+        "ubicacionActual": {
+            "ciudad": "Ciudad de USA",
+            "estado": "USA",
+            "pais": "USA",
+            "coordenadas": {
+                "latitud": "19.4326",
+                "longitud": "-99.1332"
+            }
+        },
+        "serviciosEncontrados": [
+            {
+                "nombre": "Electricidad Express",
+                "ofrece": [
+                    {
+                        "servicio": "Arreglar Bombillo",
+                        "precio": "50"
+                    },
+                    {
+                        "servicio": "Arreglar Cableado",
+                        "precio": "100"
+                    },
+                    {
+                        "servicio": "Arreglar Enchufe",
+                        "precio": "100"
+                    }
+                ],
+                "extras": [],
+                "logo": "https://ejemplo.com/logo-electricidad-express.jpg",
+                "categoria": "servicios",
+                "puntuacion": "4.5",
+                "direccion": "Calle 10 #25, Colonia Del Valle",
+                "telefono": "55 1234 5678",
+                "horario": "Lunes a Viernes 8:00 a 18:00"
+            }
+        ],
+        "tipoRequest": "Mantenimiento",
+        "tipoServicio": "On demand",
+        "Respuesta": "Se ha realizado la transaccion con exito?",
+        "status": "Exitoso",
+        "servicioUsado": "Arreglar Bombillo",
+        "monto": "50"
+    },
+    {
+        "pais": "Estados Unidos",
+        "userId": "302",
+        "idConversacion": "2",
+        "prompt": "Quiero un taco de birria",
+        "fecha": "2023-05-05",
+        "hora": "15:30",
+        "geolocalizacion": "true",
+        "ubicacionActual": {
+            "ciudad": "Ciudad de USA",
+            "estado": "USA",
+            "pais": "USA",
+            "coordenadas": {
+                "latitud": "19.4326",
+                "longitud": "-99.1332"
+            }
+        },
+        "serviciosEncontrados": [
+            {
+                "nombre": "Uber eats",
+                "ofrece": [
+                    {
+                        "servicio": "Tacontento",
+                        "precio": "0"
+                    },
+                    {
+                        "servicio": "Taquiche",
+                        "precio": "0"
+                    },
+                    {
+                        "servicio": "mr taco",
+                        "precio": "0"
+                    },
+                    {
+                        "servicio": "Comida Típica",
+                        "precio": "0"
+                    }
+                ],
+                "extras": [],
+                "logo": "https://ejemplo.com/logo-uber-eats.jpg",
+                "categoria": "restaurantes",
+                "puntuacion": "4.2",
+                "direccion": "Mex, USA",
+                "telefono": "+506 2222 3333",
+                "horario": "Lunes a Domingo 7:00 a 22:00"
+            }
+        ],
+        "tipoRequest": "Comida",
+        "tipoServicio": "On demand",
+        "Respuesta": "lugares con tacos en uber eats,como tacontento,taquiche,mr taco,comida típica, cual deseas?",
+        "status": "Negado",
+        "monto": "0"
+    },
+    {
+        "pais": "Estados Unidos",
+        "userId": "302",
+        "idConversacion": "2",
+        "prompt": "Quiero la opción más barata",
+        "fecha": "2023-05-05",
+        "hora": "15:30",
+        "geolocalizacion": "true",
+        "ubicacionActual": {
+            "ciudad": "Ciudad de USA",
+            "estado": "USA",
+            "pais": "USA",
+            "coordenadas": {
+                "latitud": "19.4326",
+                "longitud": "-99.1332"
+            }
+        },
+        "serviciosEncontrados": [
+            {
+                "nombre": "Uber eats",
+                "ofrece": [
+                    {
+                        "servicio": "Tacontento",
+                        "precio": "10"
+                    }
+                ],
+                "extras": [],
+                "logo": "https://ejemplo.com/logo-uber-eats.jpg",
+                "categoria": "restaurantes",
+                "puntuacion": "4.2",
+                "direccion": "Mex, USA",
+                "telefono": "+506 2222 3333",
+                "horario": "Lunes a Domingo 7:00 a 22:00"
+            }
+        ],
+        "tipoRequest": "Comida",
+        "tipoServicio": "On demand",
+        "Respuesta": "se te han recargado 10, paratacos de birria en tacontento, deseas solicitarlo?",
+        "status": "Negado",
+        "monto": "0"
+    },
+    {
+        "pais": "Estados Unidos",
+        "userId": "302",
+        "idConversacion": "2",
+        "prompt": "Si",
+        "fecha": "2023-05-05",
+        "hora": "15:30",
+        "geolocalizacion": "true",
+        "ubicacionActual": {
+            "ciudad": "Ciudad de USA",
+            "estado": "USA",
+            "pais": "USA",
+            "coordenadas": {
+                "latitud": "19.4326",
+                "longitud": "-99.1332"
+            }
+        },
+        "serviciosEncontrados": [
+            {
+                "nombre": "Uber eats",
+                "ofrece": [
+                    {
+                        "servicio": "Tacontento",
+                        "precio": "10"
+                    },
+                    {
+                        "servicio": "PizzaHut",
+                        "precio": "8"
+                    }
+                ],
+                "extras": [],
+                "logo": "https://ejemplo.com/logo-uber-eats.jpg",
+                "categoria": "restaurantes",
+                "puntuacion": "4.2",
+                "direccion": "Mex, USA",
+                "telefono": "+506 2222 3333",
+                "horario": "Lunes a Domingo 7:00 a 22:00"
+            }
+        ],
+        "tipoRequest": "Comida",
+        "tipoServicio": "On demand",
+        "Respuesta": "?Transaccion exitosa, se ha realizado el pago de 10",
+        "status": "Exitoso",
+        "servicioUsado": "Tacontento",
+        "monto": "0"
+    },
+    {
+        "pais": "Estados Unidos",
+        "userId": "303",
+        "idConversacion": "3",
+        "prompt": "deseo suscribirme a netflix",
+        "fecha": "2023-05-05",
+        "hora": "15:30",
+        "geolocalizacion": "true",
+        "ubicacionActual": {
+            "ciudad": "Ciudad de USA",
+            "estado": "USA",
+            "pais": "USA",
+            "coordenadas": {
+                "latitud": "19.4326",
+                "longitud": "-99.1332"
+            }
+        },
+        "serviciosEncontrados": [
+            {
+                "nombre": "Netflix",
+                "ofrece": [
+                    {
+                        "servicio": "peliculas",
+                        "precio": "15"
+                    }
+                ],
+                "extras": [],
+                "logo": "https://ejemplo.com/logo-netflix.jpg",
+                "categoria": "Entretenimiento",
+                "puntuacion": "4.8",
+                "direccion": "Calle 5, Barrio USA",
+                "telefono": "+506 2222 9999",
+                "horario": "24/7"
+            }
+        ],
+        "tipoRequest": "Entretenimiento",
+        "tipoServicio": "Suscripcion",
+        "tieneSuscripcion": "false",
+        "Respuesta": "quieres pagar 15 dolares para suscribirte?",
+        "status": "Negado",
+        "monto": "0"
+    },
+    {
+        "pais": "Estados Unidos",
+        "userId": "303",
+        "idConversacion": "3",
+        "prompt": "Si",
+        "fecha": "2023-05-05",
+        "hora": "15:30",
+        "geolocalizacion": "true",
+        "ubicacionActual": {
+            "ciudad": "Ciudad de USA",
+            "estado": "USA",
+            "pais": "USA",
+            "coordenadas": {
+                "latitud": "19.4326",
+                "longitud": "-99.1332"
+            }
+        },
+        "serviciosEncontrados": [
+            {
+                "nombre": "Netflix",
+                "ofrece": [
+                    {
+                        "servicio": "peliculas",
+                        "precio": "15"
+                    },
+                    {
+                        "servicio": "series",
+                        "precio": "15"
+                    }
+                ],
+                "extras": [],
+                "logo": "https://ejemplo.com/logo-netflix.jpg",
+                "categoria": "Entretenimiento",
+                "puntuacion": "4.8",
+                "direccion": "Calle 5, Barrio USA",
+                "telefono": "+506 2222 9999",
+                "horario": "24/7"
+            }
+        ],
+        "tipoRequest": "Entretenimiento",
+        "tipoServicio": "Suscripcion",
+        "tieneSuscripcion": "false",
+        "Respuesta": "Transaccion exitosa",
+        "status": "Exitoso",
+        "servicioUsado": "series",
+        "monto": "15"
+    },
+    {
+        "pais": "Estados Unidos",
+        "userId": "304",
+        "idConversacion": "4",
+        "prompt": "Me siento solo y quiero hablar con alguien",
+        "fecha": "2023-05-05",
+        "hora": "15:30",
+        "geolocalizacion": "true",
+        "ubicacionActual": {
+            "ciudad": "Ciudad de USA",
+            "estado": "USA",
+            "pais": "USA",
+            "coordenadas": {
+                "latitud": "19.4326",
+                "longitud": "-99.1332"
+            }
+        },
+        "serviciosEncontrados": [
+            {
+                "nombre": "Cariñosas al rescate",
+                "ofrece": [
+                    {
+                        "servicio": "llamadas",
+                        "precio": "10"
+                    },
+                    {
+                        "servicio": "video llamadas",
+                        "precio": "20"
+                    },
+                    {
+                        "servicio": "visita a domicilio",
+                        "precio": "100"
+                    }
+                ],
+                "extras": [],
+                "logo": "https://ejemplo.com/logo-Cariñosas.jpg",
+                "categoria": "Entretenimiento",
+                "puntuacion": "4.8",
+                "direccion": "Calle 5, Barrio USA",
+                "telefono": "+506 2222 9999",
+                "horario": "24/7"
+            }
+        ],
+        "tipoRequest": "Entretenimiento",
+        "tipoServicio": "On demand",
+        "Respuesta": "quieres pagar 10 dolares para hablar con una cariñosa?",
+        "status": "Negado",
+        "monto": "0"
+    },
+    {
+        "pais": "Estados Unidos",
+        "userId": "304",
+        "idConversacion": "4",
+        "prompt": "Si lo necesito",
+        "fecha": "2023-05-05",
+        "hora": "15:30",
+        "geolocalizacion": "true",
+        "ubicacionActual": {
+            "ciudad": "Ciudad de USA",
+            "estado": "USA",
+            "pais": "USA",
+            "coordenadas": {
+                "latitud": "19.4326",
+                "longitud": "-99.1332"
+            }
+        },
+        "serviciosEncontrados": [
+            {
+                "nombre": "Cariñosas al rescate",
+                "ofrece": [
+                    {
+                        "servicio": "llamadas",
+                        "precio": "10"
+                    },
+                    {
+                        "servicio": "video llamadas",
+                        "precio": "20"
+                    },
+                    {
+                        "servicio": "visita a domicilio",
+                        "precio": "100"
+                    }
+                ],
+                "extras": [],
+                "logo": "https://ejemplo.com/logo-Cariñosas.jpg",
+                "categoria": "Entretenimiento",
+                "puntuacion": "4.8",
+                "direccion": "Calle 5, Barrio USA",
+                "telefono": "+506 2222 9999",
+                "horario": "24/7"
+            }
+        ],
+        "tipoRequest": "Entretenimiento",
+        "tipoServicio": "On demand",
+        "Respuesta": "Transaccion exitosa, espera la llamada de la cariñosa",
+        "status": "Exitoso",
+        "servicioUsado": "video llamadas",
+        "monto": "10"
+    },
+    {
+        "pais": "Estados Unidos",
+        "userId": "305",
+        "idConversacion": "5",
+        "prompt": "Pon canciones de Nodal",
+        "fecha": "2023-05-05",
+        "hora": "15:30",
+        "geolocalizacion": "true",
+        "ubicacionActual": {
+            "ciudad": "Ciudad de USA",
+            "estado": "USA",
+            "pais": "USA",
+            "coordenadas": {
+                "latitud": "19.4326",
+                "longitud": "-99.1332"
+            }
+        },
+        "serviciosEncontrados": [
+            {
+                "nombre": "Spotify",
+                "ofrece": [
+                    {
+                        "servicio": "Aqui Abajo",
+                        "precio": "0"
+                    },
+                    {
+                        "servicio": "Botella tras botella",
+                        "precio": "0"
+                    },
+                    {
+                        "servicio": "De los besos que te di",
+                        "precio": "0"
+                    }
+                ],
+                "extras": [],
+                "logo": "https://ejemplo.com/logo-spotify.jpg",
+                "categoria": "musica",
+                "puntuacion": "4.8",
+                "direccion": "Calle 5, Barrio San José",
+                "telefono": "+506 8888 8888",
+                "horario": "24/7"
+            }
+        ],
+        "tipoRequest": "Entretenimiento",
+        "tipoServicio": "Suscripcion",
+        "tieneSuscripcion": "true",
+        "Respuesta": "Reproduciendo Aqui abajo",
+        "status": "Aqui abajo",
+        "servicioUsado": "Botella tras botella",
+        "monto": "0"
+    },
+    {
+        "pais": "Estados Unidos",
+        "userId": "306",
+        "idConversacion": "6",
+        "prompt": "Quiero un taco al pastor",
+        "fecha": "2023-05-05",
+        "hora": "15:30",
+        "geolocalizacion": "true",
+        "ubicacionActual": {
+            "ciudad": "Ciudad de USA",
+            "estado": "USA",
+            "pais": "USA",
+            "coordenadas": {
+                "latitud": "19.4326",
+                "longitud": "-99.1332"
+            }
+        },
+        "serviciosEncontrados": [
+            {
+                "nombre": "Uber eats",
+                "ofrece": [
+                    {
+                        "servicio": "Tacontento",
+                        "precio": "0"
+                    },
+                    {
+                        "servicio": "Taquiche",
+                        "precio": "0"
+                    },
+                    {
+                        "servicio": "mr taco",
+                        "precio": "0"
+                    },
+                    {
+                        "servicio": "Comida Típica",
+                        "precio": "0"
+                    }
+                ],
+                "extras": [],
+                "logo": "https://ejemplo.com/logo-uber-eats.jpg",
+                "categoria": "restaurantes",
+                "puntuacion": "4.2",
+                "direccion": "Mex, USA",
+                "telefono": "+506 2222 3333",
+                "horario": "Lunes a Domingo 7:00 a 22:00"
+            }
+        ],
+        "tipoRequest": "Comida",
+        "tipoServicio": "On demand",
+        "Respuesta": "lugares con tacos en uber eats,como tacontento,taquiche,mr taco,comida típica, cual deseas?",
+        "status": "Negado",
+        "monto": "0"
+    },
+    {
+        "pais": "Estados Unidos",
+        "userId": "306",
+        "idConversacion": "6",
+        "prompt": "Quiero la opción más barata",
+        "fecha": "2023-05-05",
+        "hora": "15:30",
+        "geolocalizacion": "true",
+        "ubicacionActual": {
+            "ciudad": "Ciudad de USA",
+            "estado": "USA",
+            "pais": "USA",
+            "coordenadas": {
+                "latitud": "19.4326",
+                "longitud": "-99.1332"
+            }
+        },
+        "serviciosEncontrados": [
+            {
+                "nombre": "Uber eats",
+                "ofrece": [
+                    {
+                        "servicio": "Tacontento",
+                        "precio": "10"
+                    }
+                ],
+                "extras": [],
+                "logo": "https://ejemplo.com/logo-Tacontento.jpg",
+                "categoria": "restaurantes",
+                "puntuacion": "4.2",
+                "direccion": "Mex, USA",
+                "telefono": "+506 2222 3333",
+                "horario": "Lunes a Domingo 7:00 a 22:00"
+            }
+        ],
+        "tipoRequest": "Comida",
+        "tipoServicio": "On demand",
+        "Respuesta": "se te han recargado 10, para tacos al pastor en tacontento, deseas solicitarlo?",
+        "status": "Negado",
+        "monto": "0"
+    },
+    {
+        "pais": "Estados Unidos",
+        "userId": "306",
+        "idConversacion": "6",
+        "prompt": "Si",
+        "fecha": "2023-05-05",
+        "hora": "15:30",
+        "geolocalizacion": "true",
+        "ubicacionActual": {
+            "ciudad": "Ciudad de USA",
+            "estado": "USA",
+            "pais": "USA",
+            "coordenadas": {
+                "latitud": "19.4326",
+                "longitud": "-99.1332"
+            }
+        },
+        "serviciosEncontrados": [
+            {
+                "nombre": "Uber eats",
+                "ofrece": [
+                    {
+                        "servicio": "Tacontento",
+                        "precio": "10"
+                    }
+                ],
+                "extras": [],
+                "logo": "https://ejemplo.com/logo-Tacontento.jpg",
+                "categoria": "restaurantes",
+                "puntuacion": "4.2",
+                "direccion": "Mex, USA",
+                "telefono": "+506 2222 3333",
+                "horario": "Lunes a Domingo 7:00 a 22:00"
+            }
+        ],
+        "tipoRequest": "Comida",
+        "tipoServicio": "On demand",
+        "Respuesta": "Transaccion exitosa",
+        "status": "Exitoso",
+        "servicioUsado": "Tacontento",
+        "monto": "10"
+    },
+    {
+        "pais": "Estados Unidos",
+        "userId": "307",
+        "idConversacion": "7",
+        "prompt": "Pon shrek 2",
+        "fecha": "2023-05-05",
+        "hora": "15:30",
+        "geolocalizacion": "true",
+        "ubicacionActual": {
+            "ciudad": "Ciudad de USA",
+            "estado": "USA",
+            "pais": "USA",
+            "coordenadas": {
+                "latitud": "19.4326",
+                "longitud": "-99.1332"
+            }
+        },
+        "serviciosEncontrados": [
+            {
+                "nombre": "Netflix",
+                "ofrece": [
+                    {
+                        "servicio": "Shrek 2",
+                        "precio": "0"
+                    }
+                ],
+                "extras": [],
+                "logo": "https://ejemplo.com/logo-spotify.jpg",
+                "categoria": "Entretenimiento",
+                "puntuacion": "4.8",
+                "direccion": "Calle 5, Barrio USA",
+                "telefono": "+506 8888 9999",
+                "horario": "24/7"
+            }
+        ],
+        "tipoRequest": "Entretenimiento",
+        "tipoServicio": "Suscripcion",
+        "tieneSuscripcion": "true",
+        "Respuesta": "en seguida shrek 2",
+        "status": "Exitoso",
+        "servicioUsado": "Shrek 2",
+        "monto": "0"
+    },
+    {
+        "pais": "Estados Unidos",
+        "userId": "308",
+        "idConversacion": "8",
+        "prompt": "Quiero un uber",
+        "fecha": "2023-05-05",
+        "hora": "15:30",
+        "geolocalizacion": "true",
+        "ubicacionActual": {
+            "ciudad": "Ciudad de USA",
+            "estado": "USA",
+            "pais": "USA",
+            "coordenadas": {
+                "latitud": "19.4326",
+                "longitud": "-99.1332"
+            }
+        },
+        "serviciosEncontrados": [
+            {
+                "nombre": "Uber",
+                "ofrece": [
+                    {
+                        "servicio": "Uber X",
+                        "precio": "10"
+                    },
+                    {
+                        "servicio": "Uber XL",
+                        "precio": "15"
+                    },
+                    {
+                        "servicio": "Uber Black",
+                        "precio": "20"
+                    }
+                ],
+                "extras": [],
+                "logo": "https://ejemplo.com/logo-uber.jpg",
+                "categoria": "Transporte",
+                "puntuacion": "4.2",
+                "direccion": "Mex, USA",
+                "telefono": "+506 2222 3333",
+                "horario": "24/7"
+            }
+        ],
+        "tipoRequest": "Transporte",
+        "tipoServicio": "On demand",
+        "Respuesta": "Cual Uber deseas?",
+        "status": "Negado",
+        "monto": "0"
+    },
+    {
+        "pais": "Estados Unidos",
+        "userId": "308",
+        "idConversacion": "8",
+        "prompt": "Quiero un uber XL a mi direccion actual",
+        "fecha": "2023-05-05",
+        "hora": "15:30",
+        "geolocalizacion": "true",
+        "ubicacionActual": {
+            "ciudad": "Ciudad de USA",
+            "estado": "USA",
+            "pais": "USA",
+            "coordenadas": {
+                "latitud": "19.4326",
+                "longitud": "-99.1332"
+            }
+        },
+        "serviciosEncontrados": [
+            {
+                "nombre": "Uber",
+                "ofrece": [
+                    {
+                        "servicio": "Uber X",
+                        "precio": "10"
+                    },
+                    {
+                        "servicio": "Uber XL",
+                        "precio": "15"
+                    },
+                    {
+                        "servicio": "Uber Black",
+                        "precio": "20"
+                    }
+                ],
+                "extras": [],
+                "logo": "https://ejemplo.com/logo-uber.jpg",
+                "categoria": "Transporte",
+                "puntuacion": "4.2",
+                "direccion": "Mex, USA",
+                "telefono": "+506 2222 3333",
+                "horario": "24/7"
+            }
+        ],
+        "tipoRequest": "Transporte",
+        "tipoServicio": "On demand",
+        "Respuesta": "Ya le llega su Uber XL",
+        "status": "Exitoso",
+        "servicioUsado": "Uber XL",
+        "monto": "0"
+    }
 ]
