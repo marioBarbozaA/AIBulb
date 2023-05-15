@@ -1,5 +1,8 @@
+# Removes
 
-
+### Descripción
+Estos comandos son para hacerle build a mongo db input de logstash 
+```python
 docker file
 
 docker build -t prueba . 
@@ -13,3 +16,4 @@ docker run -d --net aibulb_OurNetwork --ip 10.0.0.23 --name elastic -p 9200:9200
 
 docker run -d --name dashserver --net aibulb_OurNetwork -p 5601:5601 kibana:8.7.1
 
+```
